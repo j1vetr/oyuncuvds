@@ -2,7 +2,8 @@ import { useState, useImperativeHandle, forwardRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Check, ChevronRight, ChevronLeft, MessageCircle, Loader2 } from "lucide-react";
+import { Check, ChevronRight, ChevronLeft, Loader2 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { packages, formatPrice, KDV_RATE, type PackageId, type BillingPeriod } from "@/config/packages";
 import { useCreatePayment } from "@workspace/api-client-react";
 import { useToast } from "@/hooks/use-toast";
@@ -78,7 +79,7 @@ function PaymentSuccess({ onReset }: SuccessProps) {
           className="h-12 px-8 bg-[#25D366] text-white font-black uppercase tracking-[1.5px] text-sm flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors"
           data-testid="button-success-whatsapp"
         >
-          <MessageCircle size={18} />
+          <WhatsAppIcon size={18} />
           WHATSAPP DESTEK İLE GÖRÜŞ
         </a>
         <button
@@ -124,7 +125,7 @@ function PaymentFailure({ onReset }: FailureProps) {
           className="h-12 px-8 bg-[#25D366] text-white font-black uppercase tracking-[1.5px] text-sm flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors"
           data-testid="button-failure-whatsapp"
         >
-          <MessageCircle size={18} />
+          <WhatsAppIcon size={18} />
           WHATSAPP DESTEK
         </a>
       </div>
@@ -583,7 +584,7 @@ export const OrderFlow = forwardRef<OrderFlowRef>((_, ref) => {
                     className="w-full h-12 border border-[#25D366]/50 text-[#25D366] font-bold uppercase tracking-[1.5px] text-sm flex items-center justify-center gap-2 hover:bg-[#25D366]/10 transition-colors"
                     data-testid="button-whatsapp-order-support"
                   >
-                    <MessageCircle size={18} />
+                    <WhatsAppIcon size={18} />
                     WHATSAPP İLE SİPARİŞ DESTEK
                   </a>
 

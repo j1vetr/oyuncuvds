@@ -1,4 +1,5 @@
-import { MessageCircle, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 export function Support() {
   const whatsappUrl = `https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, Oyun VDS hizmeti hakkında destek almak istiyorum.")}`;
@@ -22,7 +23,7 @@ export function Support() {
               className="w-full sm:w-auto h-12 px-8 bg-[#25D366] text-white font-black uppercase tracking-[1.5px] text-sm flex items-center justify-center gap-3 hover:bg-[#20bd5a] transition-colors"
               data-testid="button-support-whatsapp"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
               WHATSAPP DESTEK
             </a>
             <a

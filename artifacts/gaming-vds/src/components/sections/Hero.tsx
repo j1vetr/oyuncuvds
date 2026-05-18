@@ -1,4 +1,5 @@
-import { MessageCircle, Server, ShieldCheck, Zap, Globe, HardDrive } from "lucide-react";
+import { Server, ShieldCheck, Zap, Globe, HardDrive } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -90,7 +91,7 @@ export function Hero() {
             className="w-full md:w-auto h-14 px-8 bg-[#111] border border-[#3c3c3c] text-white font-bold uppercase tracking-[2px] text-sm flex items-center justify-center gap-3 hover:bg-[#1e1e1e] transition-colors"
             data-testid="button-hero-whatsapp"
           >
-            <MessageCircle size={19} className="text-[#25D366]" />
+            <WhatsAppIcon size={19} className="text-[#25D366]" />
             WHATSAPP DESTEK
           </a>
         </div>

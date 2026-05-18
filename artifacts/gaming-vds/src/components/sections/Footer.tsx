@@ -1,4 +1,5 @@
-import { MessageCircle, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 export function Footer() {
   const whatsappUrl = `https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, Oyun VDS hizmeti hakkında bilgi almak istiyorum.")}`;
@@ -54,7 +55,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-[#bbbbbb] font-light text-sm hover:text-white transition-colors"
                 >
-                  <MessageCircle size={16} className="text-[#25D366]" />
+                  <WhatsAppIcon size={16} className="text-[#25D366]" />
                   WhatsApp Destek
                 </a>
               </li>
