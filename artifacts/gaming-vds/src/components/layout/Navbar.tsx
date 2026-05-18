@@ -21,10 +21,10 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
-          <button onClick={() => scrollTo("ozellikler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] hover:text-primary transition-colors">Özellikler</button>
-          <button onClick={() => scrollTo("paketler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] hover:text-primary transition-colors">Paketler</button>
-          <button onClick={() => scrollTo("nasil-calisir")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] hover:text-primary transition-colors">Nasıl Çalışır?</button>
-          <button onClick={() => scrollTo("sss")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] hover:text-primary transition-colors">SSS</button>
+          <button onClick={() => scrollTo("ozellikler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">Özellikler</button>
+          <button onClick={() => scrollTo("paketler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">Paketler</button>
+          <button onClick={() => scrollTo("nasil-calisir")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">Nasıl Çalışır?</button>
+          <button onClick={() => scrollTo("sss")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">SSS</button>
         </div>
 
         <div className="hidden md:flex items-center gap-4">

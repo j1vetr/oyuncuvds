@@ -66,7 +66,7 @@ export function Hero() {
           <span className="text-primary">OYUN HESABIN</span> AÇIK KALSIN
         </h1>
 
-        <p className="text-[15px] md:text-[17px] font-light text-[#bbbbbb] max-w-2xl mb-12 leading-relaxed">
+        <p className="text-[15px] md:text-[17px] font-light text-[#d1d1d1] max-w-2xl mb-12 leading-[1.85]">
           Knight Online, Metin2 ve Silkroad hesaplarınızı pazar, farm ve EXP party için kesintisiz çalıştırın. Windows 10 kurulu, uzak masaüstü erişimli Oyuncu VDS paketleriyle hemen başlayın.
         </p>
 
