@@ -1,41 +1,19 @@
 import { MessageCircle, Server, ShieldCheck, Zap, Globe, HardDrive } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-
-const HERO_VIDEOS = [
-  "/hero-knight.mp4",
-  "/hero-silkroad.mp4",
-  "/hero-metin2.mp4",
-];
+import { useRef, useState } from "react";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [needsInteraction, setNeedsInteraction] = useState(false);
 
-  const tryPlay = (video: HTMLVideoElement) => {
-    video.play().then(() => {
-      setNeedsInteraction(false);
-    }).catch(() => {
-      setNeedsInteraction(true);
-    });
-  };
-
-  useEffect(() => {
+  const handleCanPlay = () => {
     const video = videoRef.current;
     if (!video) return;
-    video.load();
-    tryPlay(video);
-  }, [currentIndex]);
-
-  const handleEnded = () => {
-    setCurrentIndex((prev) => (prev + 1) % HERO_VIDEOS.length);
+    video.play().then(() => setNeedsInteraction(false)).catch(() => setNeedsInteraction(true));
   };
 
   const handleClick = () => {
-    const video = videoRef.current;
-    if (video && needsInteraction) {
-      tryPlay(video);
-    }
+    if (!needsInteraction) return;
+    videoRef.current?.play().then(() => setNeedsInteraction(false)).catch(() => {});
   };
 
   const scrollTo = (id: string) => {
@@ -52,16 +30,17 @@ export function Hero() {
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 0 }}
-        src={HERO_VIDEOS[currentIndex]}
+        src="/hero-bg.mp4"
         autoPlay
         muted
+        loop
         playsInline
         preload="auto"
-        onEnded={handleEnded}
+        onCanPlay={handleCanPlay}
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/55" style={{ zIndex: 1 }} />
+      <div className="absolute inset-0 bg-black/50" style={{ zIndex: 1 }} />
 
       {/* Content */}
       <div className="container mx-auto px-4 flex flex-col items-center text-center relative" style={{ zIndex: 2 }}>
