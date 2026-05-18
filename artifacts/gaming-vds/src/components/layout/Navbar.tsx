@@ -15,8 +15,8 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-md border-b border-[#3c3c3c]">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <span className="text-xl font-bold tracking-tighter uppercase text-white">OYUN VDS</span>
+        <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <img src="/logo.png" alt="Oyuncu VDS" className="h-9 w-auto" />
         </div>
 
         {/* Desktop Nav */}
