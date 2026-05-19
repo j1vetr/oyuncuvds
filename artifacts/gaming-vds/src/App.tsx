@@ -6,6 +6,9 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import PaymentSuccess from "@/pages/payment-success";
 import PaymentFail from "@/pages/payment-fail";
+import GizlilikPolitikasi from "@/pages/gizlilik-politikasi";
+import MesafeliSatisSozlesmesi from "@/pages/mesafeli-satis-sozlesmesi";
+import IadeIptal from "@/pages/iade-iptal";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +18,9 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/odeme-basarili" component={PaymentSuccess} />
       <Route path="/odeme-basarisiz" component={PaymentFail} />
+      <Route path="/gizlilik-politikasi" component={GizlilikPolitikasi} />
+      <Route path="/mesafeli-satis-sozlesmesi" component={MesafeliSatisSozlesmesi} />
+      <Route path="/iade-iptal" component={IadeIptal} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 const WA_NUMBER = "908503094769";
@@ -15,9 +15,13 @@ export function Footer() {
             <a href="/" className="inline-block mb-4">
               <img src="/logo.png" alt="Oyuncu VDS" className="h-10 w-auto" />
             </a>
-            <p className="text-[#7e7e7e] font-light text-sm leading-relaxed">
+            <p className="text-[#7e7e7e] font-light text-sm leading-relaxed mb-3">
               Knight Online, Metin2 ve Silkroad için 7/24 kesintisiz oyun VDS hizmeti.
             </p>
+            <div className="flex items-start gap-2 text-[#5e5e5e] text-xs font-light leading-[1.7]">
+              <MapPin size={12} className="shrink-0 mt-0.5" />
+              <span>Sarıyer Merkez Mah. Sarıyer Deresi Sk. No:2 D:2 Sarıyer / İstanbul</span>
+            </div>
           </div>
 
           {/* Legal */}
@@ -27,17 +31,17 @@ export function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
+                <a href="/gizlilik-politikasi" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
                   Gizlilik Politikası
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
+                <a href="/mesafeli-satis-sozlesmesi" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
                   Mesafeli Satış Sözleşmesi
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
+                <a href="/iade-iptal" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
                   İade ve İptal Koşulları
                 </a>
               </li>
