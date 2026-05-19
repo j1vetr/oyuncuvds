@@ -56,8 +56,8 @@ export default function PaymentSuccess() {
 
         {/* Success header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 border border-primary/40 bg-primary/5 mb-6">
-            <CheckCircle size={34} className="text-primary" strokeWidth={1.5} />
+          <div className="flex justify-center mb-6">
+            <img src="/logo.png" alt="Oyuncu VDS" className="h-20 w-auto" />
           </div>
           <h1 className="text-[26px] md:text-[36px] font-black uppercase tracking-tight text-white mb-4">
             Ödemeniz Başarıyla Alındı
