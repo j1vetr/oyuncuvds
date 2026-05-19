@@ -1,2 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /odeme-basarili
+Disallow: /odeme-basarisiz
+
+Sitemap: https://oyuncuvds.com.tr/sitemap.xml
