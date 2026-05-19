@@ -122,7 +122,7 @@ export function OrderModal({ isOpen, onClose, initialPackageId = "baslangic", in
   const whatsappOrderUrl = () => {
     const vals = getValues();
     const msg = `Merhaba, Oyun VDS siparişi oluşturmak istiyorum. Paket: ${selectedPackage.name}, Dönem: ${billing === "aylik" ? "Aylık" : "Yıllık"}, Ad Soyad: ${vals.customerName || "—"}, Telefon: ${vals.whatsapp || "—"}`;
-    return `https://wa.me/905000000000?text=${encodeURIComponent(msg)}`;
+    return `https://wa.me/908503094769?text=${encodeURIComponent(msg)}`;
   };
 
   const handlePayment = async () => {
@@ -236,7 +236,7 @@ export function OrderModal({ isOpen, onClose, initialPackageId = "baslangic", in
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <a
-                    href={`https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, ödeme yaptım. VDS erişim bilgilerimi bekliyorum.")}`}
+                    href={`https://wa.me/908503094769?text=${encodeURIComponent("Merhaba, ödeme yaptım. VDS erişim bilgilerimi bekliyorum.")}`}
                     target="_blank" rel="noopener noreferrer"
                     className="h-11 px-7 bg-[#25D366] text-white font-black uppercase tracking-[1.5px] text-xs flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors"
                     data-testid="button-success-whatsapp"
@@ -273,7 +273,7 @@ export function OrderModal({ isOpen, onClose, initialPackageId = "baslangic", in
                     Tekrar Dene
                   </button>
                   <a
-                    href={`https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, ödeme yapamadım. Yardım almak istiyorum.")}`}
+                    href={`https://wa.me/908503094769?text=${encodeURIComponent("Merhaba, ödeme yapamadım. Yardım almak istiyorum.")}`}
                     target="_blank" rel="noopener noreferrer"
                     className="h-11 px-7 bg-[#25D366] text-white font-black uppercase tracking-[1.5px] text-xs flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors"
                     data-testid="button-failure-whatsapp"

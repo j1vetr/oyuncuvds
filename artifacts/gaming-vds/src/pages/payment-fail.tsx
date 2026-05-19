@@ -1,7 +1,7 @@
 import { XCircle } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
-const WA_NUMBER = "905000000000";
+const WA_NUMBER = "908503094769";
 const WA_MSG = encodeURIComponent(
   "Merhaba, ödeme işlemim tamamlanamadı. Destek almak istiyorum."
 );

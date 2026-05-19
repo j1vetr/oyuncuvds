@@ -83,7 +83,7 @@ export function Hero({ onOpenOrder }: HeroProps) {
             Sipariş Ver
           </button>
           <a
-            href="https://wa.me/905000000000" target="_blank" rel="noreferrer"
+            href="https://wa.me/908503094769" target="_blank" rel="noreferrer"
             className="w-full md:w-auto h-14 px-8 bg-[#111] border border-[#3c3c3c] text-white font-bold uppercase tracking-[2px] text-sm flex items-center justify-center gap-3 hover:bg-[#1e1e1e] transition-colors"
             data-testid="button-hero-whatsapp"
           >

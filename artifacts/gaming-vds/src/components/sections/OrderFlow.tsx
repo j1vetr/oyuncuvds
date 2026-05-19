@@ -59,7 +59,7 @@ interface SuccessProps {
 }
 
 function PaymentSuccess({ onReset }: SuccessProps) {
-  const whatsappUrl = `https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, ödeme yaptım. VDS erişim bilgilerimi bekliyorum.")}`;
+  const whatsappUrl = `https://wa.me/908503094769?text=${encodeURIComponent("Merhaba, ödeme yaptım. VDS erişim bilgilerimi bekliyorum.")}`;
   return (
     <div className="text-center py-16 px-8" data-testid="section-payment-success">
       <div className="w-20 h-20 bg-primary/10 border border-primary/30 flex items-center justify-center mx-auto mb-8">
@@ -98,7 +98,7 @@ interface FailureProps {
 }
 
 function PaymentFailure({ onReset }: FailureProps) {
-  const whatsappUrl = `https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, ödeme yapamadım. Yardım almak istiyorum.")}`;
+  const whatsappUrl = `https://wa.me/908503094769?text=${encodeURIComponent("Merhaba, ödeme yapamadım. Yardım almak istiyorum.")}`;
   return (
     <div className="text-center py-16 px-8" data-testid="section-payment-failure">
       <div className="w-20 h-20 bg-destructive/10 border border-destructive/30 flex items-center justify-center mx-auto mb-8">
@@ -213,7 +213,7 @@ export const OrderFlow = forwardRef<OrderFlowRef>((_, ref) => {
 
   const whatsappOrderUrl = () => {
     const msg = `Merhaba, Oyun VDS siparişi oluşturmak istiyorum. Paket: ${selectedPackage.name}, Dönem: ${billing === "aylik" ? "Aylık" : "Yıllık"}, Ad Soyad: ${formValues.customerName || "—"}, Telefon: ${formValues.whatsapp || "—"}`;
-    return `https://wa.me/905000000000?text=${encodeURIComponent(msg)}`;
+    return `https://wa.me/908503094769?text=${encodeURIComponent(msg)}`;
   };
 
   const handlePayment = async () => {

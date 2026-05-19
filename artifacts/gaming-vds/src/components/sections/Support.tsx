@@ -2,7 +2,7 @@ import { Mail } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 export function Support() {
-  const whatsappUrl = `https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, Oyun VDS hizmeti hakkında destek almak istiyorum.")}`;
+  const whatsappUrl = `https://wa.me/908503094769?text=${encodeURIComponent("Merhaba, Oyun VDS hizmeti hakkında destek almak istiyorum.")}`;
 
   return (
     <section className="w-full bg-black py-24">

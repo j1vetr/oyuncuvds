@@ -1,7 +1,7 @@
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 export function WhatsAppButton() {
-  const whatsappUrl = `https://wa.me/905000000000?text=${encodeURIComponent("Merhaba, Oyun VDS hizmeti hakkında bilgi almak istiyorum.")}`;
+  const whatsappUrl = `https://wa.me/908503094769?text=${encodeURIComponent("Merhaba, Oyun VDS hizmeti hakkında bilgi almak istiyorum.")}`;
 
   return (
     <a
