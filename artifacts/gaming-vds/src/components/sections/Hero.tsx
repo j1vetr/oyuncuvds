@@ -109,7 +109,8 @@ export function Hero() {
                 className="absolute inset-0 w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-transform duration-500"
               />
               {/* Dark overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+              <div className="absolute inset-0 bg-black/60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
               {/* Hover tint */}
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
 
@@ -119,8 +120,8 @@ export function Hero() {
                 <img
                   src={game.logo}
                   alt={`${game.name} logo`}
-                  className="h-5 w-auto object-contain object-left mb-2 opacity-80 group-hover:opacity-100 transition-opacity"
-                  style={{ filter: "drop-shadow(0 1px 6px rgba(0,0,0,1))" }}
+                  className="h-10 w-auto object-contain object-left mb-3 opacity-90 group-hover:opacity-100 transition-opacity"
+                  style={{ filter: "drop-shadow(0 2px 8px rgba(0,0,0,1))" }}
                 />
                 {/* Tags */}
                 <div className="flex gap-1.5 flex-wrap">
