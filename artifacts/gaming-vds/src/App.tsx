@@ -9,6 +9,9 @@ import PaymentFail from "@/pages/payment-fail";
 import GizlilikPolitikasi from "@/pages/gizlilik-politikasi";
 import MesafeliSatisSozlesmesi from "@/pages/mesafeli-satis-sozlesmesi";
 import IadeIptal from "@/pages/iade-iptal";
+import Kvkk from "@/pages/kvkk";
+import OnBilgilendirme from "@/pages/on-bilgilendirme";
+import HizmetTeslimat from "@/pages/hizmet-teslimat";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +24,9 @@ function Router() {
       <Route path="/gizlilik-politikasi" component={GizlilikPolitikasi} />
       <Route path="/mesafeli-satis-sozlesmesi" component={MesafeliSatisSozlesmesi} />
       <Route path="/iade-iptal" component={IadeIptal} />
+      <Route path="/kvkk" component={Kvkk} />
+      <Route path="/on-bilgilendirme" component={OnBilgilendirme} />
+      <Route path="/hizmet-teslimat" component={HizmetTeslimat} />
       <Route component={NotFound} />
     </Switch>
   );

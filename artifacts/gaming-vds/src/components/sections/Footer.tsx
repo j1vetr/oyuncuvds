@@ -4,14 +4,23 @@ import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 const WA_NUMBER = "908503094769";
 const WA_MSG = encodeURIComponent("Merhaba, Oyun VDS hizmeti hakkında bilgi almak istiyorum.");
 
+const LEGAL_LINKS = [
+  { label: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
+  { label: "KVKK Aydınlatma Metni", href: "/kvkk" },
+  { label: "Mesafeli Satış Sözleşmesi", href: "/mesafeli-satis-sozlesmesi" },
+  { label: "Ön Bilgilendirme Formu", href: "/on-bilgilendirme" },
+  { label: "İade ve İptal Koşulları", href: "/iade-iptal" },
+  { label: "Hizmet ve Teslimat Süreci", href: "/hizmet-teslimat" },
+];
+
 export function Footer() {
   return (
     <footer className="w-full bg-black border-t border-[#3c3c3c]">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
 
           {/* Brand */}
-          <div>
+          <div className="lg:col-span-1">
             <a href="/" className="inline-block mb-4">
               <img src="/logo.png" alt="Oyuncu VDS" className="h-10 w-auto" />
             </a>
@@ -30,28 +39,20 @@ export function Footer() {
               YASAL
             </h4>
             <ul className="space-y-3">
-              <li>
-                <a href="/gizlilik-politikasi" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
-                  Gizlilik Politikası
-                </a>
-              </li>
-              <li>
-                <a href="/mesafeli-satis-sozlesmesi" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
-                  Mesafeli Satış Sözleşmesi
-                </a>
-              </li>
-              <li>
-                <a href="/iade-iptal" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
-                  İade ve İptal Koşulları
-                </a>
-              </li>
+              {LEGAL_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contact / Hizmet */}
           <div>
             <h4 className="text-xs font-black uppercase tracking-[1.5px] text-[#7e7e7e] mb-6">
-              DESTEK
+              İLETİŞİM
             </h4>
             <ul className="space-y-3">
               <li>
@@ -87,6 +88,28 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Quick links */}
+          <div>
+            <h4 className="text-xs font-black uppercase tracking-[1.5px] text-[#7e7e7e] mb-6">
+              HIZLI ERİŞİM
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="/#paketler" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">Paketler</a>
+              </li>
+              <li>
+                <a href="/#nasil-calisir" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">Nasıl Çalışır?</a>
+              </li>
+              <li>
+                <a href="/#sss" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">Sık Sorulan Sorular</a>
+              </li>
+              <li>
+                <a href="/#iletisim" className="text-[#bbbbbb] font-light text-sm hover:text-white transition-colors">İletişim</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
         {/* Copyright row */}
