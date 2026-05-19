@@ -98,7 +98,7 @@ export function Contact() {
                 <span className="text-white font-black text-[18px] tracking-tight">7/24 Aktif</span>
               </div>
               <p className="text-[#555] font-light text-[12px] leading-[1.7]">
-                Pazartesi — Pazar, 00:00 — 23:59 arasında WhatsApp ve e-posta üzerinden destek sağlanmaktadır.
+                Pazartesi - Pazar, 00:00 - 23:59 arasında WhatsApp ve e-posta üzerinden destek sağlanmaktadır.
               </p>
             </div>
           </div>
