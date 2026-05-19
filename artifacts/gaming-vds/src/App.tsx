@@ -4,6 +4,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import PaymentSuccess from "@/pages/payment-success";
+import PaymentFail from "@/pages/payment-fail";
 
 const queryClient = new QueryClient();
 
@@ -11,6 +13,8 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/odeme-basarili" component={PaymentSuccess} />
+      <Route path="/odeme-basarisiz" component={PaymentFail} />
       <Route component={NotFound} />
     </Switch>
   );
