@@ -1,4 +1,4 @@
-import { Mail, MapPin, Clock, Phone } from "lucide-react";
+import { Mail, MapPin, Clock, Phone, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 const WA_NUMBER = "908503094769";
@@ -105,8 +105,8 @@ export function Contact() {
 
         </div>
 
-        {/* Bottom phone strip */}
-        <div className="max-w-5xl mx-auto mt-0">
+        {/* Bottom strip — phone + instagram */}
+        <div className="max-w-5xl mx-auto mt-0 grid grid-cols-1 md:grid-cols-2">
           <a
             href={`tel:+908503094769`}
             className="group flex items-center justify-between border border-[#1e1e1e] border-t-0 bg-[#050505] hover:border-primary/30 transition-all px-8 py-5"
@@ -121,6 +121,24 @@ export function Contact() {
             </div>
             <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#555] group-hover:text-primary transition-colors">
               Ara
+            </span>
+          </a>
+          <a
+            href="https://instagram.com/oyuncuvds"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-between border border-[#1e1e1e] border-t-0 md:border-l-0 bg-[#050505] hover:border-[#E1306C]/40 transition-all px-8 py-5"
+            data-testid="contact-instagram"
+          >
+            <div className="flex items-center gap-4">
+              <Instagram size={16} className="text-[#555] group-hover:text-[#E1306C] transition-colors" />
+              <div>
+                <p className="text-[10px] font-black uppercase tracking-[2px] text-[#555] mb-0.5">Instagram</p>
+                <p className="text-white font-black text-[15px] tracking-tight">@oyuncuvds</p>
+              </div>
+            </div>
+            <span className="text-[10px] font-bold uppercase tracking-[1.5px] text-[#555] group-hover:text-[#E1306C] transition-colors">
+              Takip Et
             </span>
           </a>
         </div>

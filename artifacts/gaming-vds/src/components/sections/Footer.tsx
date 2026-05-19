@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Instagram } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 const WA_NUMBER = "908503094769";
@@ -72,6 +72,17 @@ export function Footer() {
                 >
                   <Mail size={16} className="text-primary" />
                   destek@oyuncuvds.com.tr
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com/oyuncuvds"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-[#bbbbbb] font-light text-sm hover:text-white transition-colors"
+                >
+                  <Instagram size={16} className="text-[#E1306C]" />
+                  @oyuncuvds
                 </a>
               </li>
             </ul>
