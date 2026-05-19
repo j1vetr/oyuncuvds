@@ -310,7 +310,7 @@ export const OrderFlow = forwardRef<OrderFlowRef>((_, ref) => {
             {step === 0 && (
               <div data-testid="section-step-1">
                 <h3 className="text-lg font-black uppercase text-white tracking-[1px] mb-6">
-                  PAKET SEÇIMI
+                  PAKET SEÇİMİ
                 </h3>
 
                 {/* Billing toggle */}
