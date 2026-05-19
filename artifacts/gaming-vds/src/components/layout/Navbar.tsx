@@ -1,7 +1,11 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-export function Navbar() {
+interface NavbarProps {
+  onOpenOrder?: () => void;
+}
+
+export function Navbar({ onOpenOrder }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollTo = (id: string) => {
@@ -28,8 +32,8 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <button className="h-10 px-6 font-bold uppercase tracking-[1.5px] text-sm border border-white text-white hover:bg-white/10 transition-colors">WhatsApp Destek</button>
-          <button onClick={() => scrollTo("siparis")} className="h-10 px-6 font-bold uppercase tracking-[1.5px] text-sm bg-primary text-black hover:bg-primary/90 transition-colors">Sipariş Ver</button>
+          <button className="h-10 px-6 font-bold uppercase tracking-[1.5px] text-sm border border-white text-white hover:bg-white/10 transition-colors">Whatsapp Destek</button>
+          <button onClick={() => onOpenOrder?.()} className="h-10 px-6 font-bold uppercase tracking-[1.5px] text-sm bg-primary text-black hover:bg-primary/90 transition-colors">Sipariş Ver</button>
         </div>
 
         {/* Mobile Nav Toggle */}
@@ -46,8 +50,8 @@ export function Navbar() {
           <button onClick={() => scrollTo("nasil-calisir")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">Nasıl Çalışır?</button>
           <button onClick={() => scrollTo("sss")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">SSS</button>
           <hr className="border-[#3c3c3c]" />
-          <button className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm border border-white text-white w-full">WhatsApp Destek</button>
-          <button onClick={() => scrollTo("siparis")} className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm bg-primary text-black w-full">Sipariş Ver</button>
+          <button className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm border border-white text-white w-full">Whatsapp Destek</button>
+          <button onClick={() => { onOpenOrder?.(); setIsOpen(false); }} className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm bg-primary text-black w-full">Sipariş Ver</button>
         </div>
       )}
     </nav>

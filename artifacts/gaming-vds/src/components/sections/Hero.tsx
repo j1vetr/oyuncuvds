@@ -4,6 +4,10 @@ const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
+interface HeroProps {
+  onOpenOrder?: () => void;
+}
+
 const GAMES = [
   {
     name: "Knight Online",
@@ -25,7 +29,7 @@ const GAMES = [
   },
 ];
 
-export function Hero() {
+export function Hero({ onOpenOrder }: HeroProps) {
   return (
     <section className="relative w-full pt-28 pb-0 flex flex-col items-center justify-center min-h-[90vh] overflow-hidden">
       {/* Background image */}
@@ -72,7 +76,7 @@ export function Hero() {
             Paketleri İncele
           </button>
           <button
-            onClick={() => scrollTo("siparis")}
+            onClick={() => onOpenOrder?.()}
             className="w-full md:w-auto h-14 px-10 bg-transparent border border-white text-white font-bold uppercase tracking-[2px] text-sm hover:bg-white/10 transition-colors"
             data-testid="button-hero-order"
           >

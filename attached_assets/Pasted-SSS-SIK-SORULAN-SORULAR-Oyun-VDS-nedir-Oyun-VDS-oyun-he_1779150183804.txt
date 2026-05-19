@@ -1,0 +1,58 @@
+SSS / SIK SORULAN SORULAR
+
+Oyun VDS nedir?
+Oyun VDS, oyun hesabınızı kendi bilgisayarınızı 7/24 açık bırakmadan çalıştırabileceğiniz uzaktaki Windows sistemidir. Pazar, farm ve EXP party gibi uzun süreli kullanımlar için tercih edilir.
+
+Bilgisayarım kapalıyken oyun hesabım açık kalır mı?
+Evet. VDS uzaktaki sunucu altyapısında çalıştığı için kendi bilgisayarınız kapalı olsa bile sistem açık kalmaya devam eder. Siz sadece ihtiyaç duyduğunuzda bağlanıp kontrol edersiniz.
+
+VDS’ye nasıl bağlanacağım?
+Sipariş sonrası size sunucu IP bilgisi, kullanıcı adı ve şifre iletilir. Genellikle sistem içerisine RustDesk kurulu şekilde teslim edilir. Böylece daha pratik ve akıcı şekilde bağlantı sağlayabilirsiniz.
+
+RDP ile mi bağlanacağım, RustDesk var mı?
+Sunucu bilgileri IP ve şifre ile teslim edilir. Standart bağlantı için gerekli bilgiler paylaşılır; kullanım kolaylığı için çoğu teslimatta RustDesk kurulu şekilde sunulur. Bu sayede oyun ekranını kontrol etmek daha rahat olur.
+
+Normal uzak masaüstü bağlantısı kasar mı?
+Bazı oyunlarda klasik uzak masaüstü bağlantısı ekran akıcılığı açısından yeterli gelmeyebilir. Bu yüzden kullanım deneyimini iyileştirmek için genellikle RustDesk ile bağlantı önerilir.
+
+Telefondan veya tabletten bağlanabilir miyim?
+Evet. RustDesk veya desteklenen uzak bağlantı uygulamaları ile telefon, tablet veya bilgisayar üzerinden VDS’ye bağlanabilirsiniz. Böylece dışarıdayken bile hesabınızı kontrol edebilirsiniz.
+
+Hangi oyunlar için uygundur?
+Oyuncu VDS; Knight Online, Metin2, Silkroad Online ve benzeri MMORPG oyunlarında pazar kurma, karakter açık bırakma, farm ve EXP party kullanımları için tercih edilebilir.
+
+VDS hazır mı teslim edilir?
+Evet. VDS, Windows 10 kurulu şekilde teslim edilir. Bağlantı bilgileri ve gerekli erişim detayları WhatsApp üzerinden paylaşılır.
+
+Teslimat ne kadar sürer?
+Ödeme sonrası sipariş yoğunluğuna göre VDS bilgileriniz en kısa sürede hazırlanıp WhatsApp üzerinden iletilir. Teslimat süresi yoğunluğa göre değişebilir.
+
+İnternetim kesilirse VDS kapanır mı?
+Hayır. Sizin ev internetiniz kesilse bile VDS çalışmaya devam eder. Sadece siz tekrar bağlanana kadar kontrol edemezsiniz.
+
+Elektrik kesilirse oyun kapanır mı?
+Kendi evinizde elektrik kesilmesi VDS’yi etkilemez. VDS uzaktaki sunucu altyapısında çalıştığı için kendi bilgisayarınızın açık olmasına gerek yoktur.
+
+Aynı anda kaç oyun hesabı açabilirim?
+Bu durum seçilen pakete, oyunun sistem ihtiyacına ve kullanım şekline göre değişir. Daha stabil ve uzun süreli kullanım için Performans Oyun VDS paketi önerilir.
+
+Paket yükseltme yapabilir miyim?
+Evet. İhtiyacınız artarsa uygunluk durumuna göre daha yüksek pakete geçiş yapabilirsiniz. Paket değişimi için WhatsApp destek üzerinden iletişime geçebilirsiniz.
+
+Aylık ve yıllık ödeme arasındaki fark nedir?
+Aylık ödeme her ay yenilenir. Yıllık alımda daha avantajlı fiyat sunulur ve 10 ay ödeyip 12 ay kullanmış olursunuz.
+
+Fiyatlara KDV dahil mi?
+Paket fiyatları + KDV olarak belirtilir. Sipariş özetinde KDV tutarı ve ödenecek toplam fiyat ayrıca gösterilir.
+
+Destek nasıl sağlanıyor?
+Destek WhatsApp ve e-posta üzerinden sağlanır. Bağlantı, teslimat ve temel kullanım konularında yardımcı olunur.
+
+Oyun kurulumu yapılıyor mu?
+Standart teslimatta VDS Windows 10 kurulu şekilde teslim edilir. Oyun kurulumu veya özel kurulum talepleri için sipariş sırasında not bırakabilir ya da WhatsApp destek ile görüşebilirsiniz.
+
+VDS sürekli açık kalabilir mi?
+Evet. Hizmetin amacı 7/24 açık kullanım sağlamaktır. Ancak oyunların kendi bakım süreçleri, güncellemeleri veya oyun taraflı bağlantı sorunları VDS hizmetinden bağımsızdır.
+
+Sipariş sonrası bilgilerim nereden gelecek?
+Siparişiniz tamamlandıktan sonra VDS erişim bilgileriniz WhatsApp üzerinden tarafınıza iletilir. Bu yüzden sipariş formunda aktif kullandığınız WhatsApp numarasını yazmanız önemlidir.
