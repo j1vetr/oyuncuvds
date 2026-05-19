@@ -29,16 +29,6 @@ const games = [
     accentColor: "from-yellow-950/80 via-yellow-900/30 to-transparent",
     tagColor: "border-yellow-400/30 text-yellow-300",
   },
-  {
-    id: "diger",
-    name: "Diğer MMORPG Oyunları",
-    description: "Windows 10 kurulu VDS ile desteklenen tüm MMORPG oyunları için uygundur.",
-    image: null,
-    logo: null,
-    tags: ["Pazar", "Farm", "EXP Party"],
-    accentColor: "from-cyan-950/80 via-cyan-900/20 to-transparent",
-    tagColor: "border-cyan-400/30 text-cyan-300",
-  },
 ];
 
 export function Games() {
@@ -62,7 +52,7 @@ export function Games() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {games.map((game) => (
             <div
               key={game.id}
@@ -70,7 +60,7 @@ export function Games() {
               data-testid={`card-game-${game.id}`}
             >
               {/* Image area */}
-              <div className="relative h-44 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 {game.image ? (
                   <>
                     <img
