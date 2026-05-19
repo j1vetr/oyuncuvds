@@ -5,6 +5,7 @@ import { ProblemSolution } from "@/components/sections/ProblemSolution";
 import { Packages } from "@/components/sections/Packages";
 import { Games } from "@/components/sections/Games";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { About } from "@/components/sections/About";
 import { OrderModal } from "@/components/sections/OrderModal";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import type { PackageId, BillingPeriod } from "@/config/packages";
@@ -34,6 +35,7 @@ export default function Home() {
 
       <main>
         <Hero onOpenOrder={() => openOrder()} />
+        <About />
         <ProblemSolution />
         <Packages onSelectPackage={(pkgId, billing) => openOrder(pkgId, billing)} />
         <Games />
