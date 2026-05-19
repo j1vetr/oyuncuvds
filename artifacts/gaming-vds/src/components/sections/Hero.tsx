@@ -128,7 +128,7 @@ export function Hero({ onOpenOrder }: HeroProps) {
                   style={{ filter: "drop-shadow(0 2px 8px rgba(0,0,0,1))" }}
                 />
                 {/* Tags */}
-                <div className="flex gap-1.5 flex-wrap">
+                <div className="hidden md:flex gap-1.5 flex-wrap">
                   {game.tags.map((tag) => (
                     <span
                       key={tag}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
@@ -13,6 +13,9 @@ import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import type { PackageId, BillingPeriod } from "@/config/packages";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Oyuncu VDS | 7/24 Gaming VDS – Knight Online, Metin2, Silkroad";
+  }, []);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalPackageId, setModalPackageId] = useState<PackageId>("baslangic");
   const [modalBilling, setModalBilling] = useState<BillingPeriod>("aylik");

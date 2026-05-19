@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CheckCircle, Monitor, Smartphone, Apple, ChevronRight, AlertTriangle } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
@@ -41,6 +42,9 @@ const RUSTDESK_STEPS = [
 ];
 
 export default function PaymentSuccess() {
+  useEffect(() => {
+    document.title = "Ödemeniz Alındı | OyuncuVDS.com.tr";
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-primary selection:text-black">
 

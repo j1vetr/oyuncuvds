@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { XCircle } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
@@ -7,6 +8,9 @@ const WA_MSG = encodeURIComponent(
 );
 
 export default function PaymentFail() {
+  useEffect(() => {
+    document.title = "Ödeme Başarısız | OyuncuVDS.com.tr";
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white font-sans flex flex-col selection:bg-primary selection:text-black">
 

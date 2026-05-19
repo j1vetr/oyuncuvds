@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 
 const COMPANY = "OyuncuVDS.com.tr (TOOV Internet Solutions)";
 const ADDRESS = "Sarıyer Merkez Mah. Sarıyer Deresi Sk. No:2 D:2 Sarıyer / İstanbul";
@@ -5,6 +6,9 @@ const EMAIL = "destek@oyuncuvds.com.tr";
 const PHONE = "0850 309 47 69";
 
 export default function GizlilikPolitikasi() {
+  useEffect(() => {
+    document.title = "Gizlilik Politikası | OyuncuVDS.com.tr";
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-primary selection:text-black">
       <div className="border-b border-[#1a1a1a] px-6 py-4 flex items-center justify-between">

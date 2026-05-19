@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 
 const EMAIL = "destek@oyuncuvds.com.tr";
 const PHONE = "0850 309 47 69";
 
 export default function IadeIptal() {
+  useEffect(() => {
+    document.title = "İade ve İptal Koşulları | OyuncuVDS.com.tr";
+  }, []);
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-primary selection:text-black">
       <div className="border-b border-[#1a1a1a] px-6 py-4 flex items-center justify-between">
