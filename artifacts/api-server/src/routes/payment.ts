@@ -1,6 +1,7 @@
 import { Router, type IRouter } from "express";
 import { CreatePaymentBody } from "@workspace/api-zod";
 import { logger } from "../lib/logger";
+import { sendWhatsApp, buildOrderConfirmation } from "../lib/whatsapp";
 import crypto from "crypto";
 
 const router: IRouter = Router();
@@ -40,6 +41,12 @@ router.post("/create-payment", async (req, res): Promise<void> => {
     req.log.info(
       { packageName, billingPeriod, totalPrice, customerName, email },
       "PayTR credentials not configured — returning placeholder payment response"
+    );
+
+    // Send WhatsApp confirmation in placeholder mode (fire-and-forget)
+    void sendWhatsApp(
+      whatsapp,
+      buildOrderConfirmation({ customerName, packageName, billingPeriod, totalPrice })
     );
 
     res.json({
@@ -106,6 +113,12 @@ router.post("/create-payment", async (req, res): Promise<void> => {
     }
 
     req.log.info({ orderId, packageName, totalPrice }, "PayTR payment session created");
+
+    // Send WhatsApp confirmation in live mode (fire-and-forget)
+    void sendWhatsApp(
+      whatsapp,
+      buildOrderConfirmation({ customerName, packageName, billingPeriod, totalPrice })
+    );
 
     res.json({
       success: true,
