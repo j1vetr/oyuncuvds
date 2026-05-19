@@ -1,0 +1,117 @@
+Ödeme sonrası başarı ekranını daha detaylı, kullanıcı odaklı ve premium şekilde tasarla.
+
+Bu ekran ödeme başarılı olduktan sonra görünecek. Kullanıcının siparişi tamamladığını, teslimat sürecinin WhatsApp üzerinden yapılacağını ve kurulum sırasına göre maksimum 30-60 dakika içinde dönüş sağlanacağını net şekilde anlat.
+
+Tasarım:
+- Site genelindeki siyah premium tasarım dilini koru.
+- Mobil uyumlu olsun.
+- Kullanıcı ödeme sonrası kendini güvende hissetsin.
+- Büyük ve net başarı başlığı kullan.
+- Kart yapısı premium, sade, okunabilir ve güven veren şekilde olsun.
+- Cyan vurgu sadece önemli alanlarda kullanılsın.
+- Gereksiz neon veya karmaşık efekt olmasın.
+- Bölüm içinde ikonlar kullanılabilir.
+- CTA butonları net olsun.
+
+Başlık:
+ÖDEMENİZ BAŞARIYLA ALINDI
+
+Alt açıklama:
+Siparişiniz bize ulaştı. Kurulum sırasına göre VDS erişim bilgileriniz maksimum 30-60 dakika içerisinde WhatsApp üzerinden tarafınıza iletilecektir.
+
+Bilgilendirme kartı:
+Başlık:
+Sırada Ne Var?
+
+Maddeler:
+1. Siparişiniz kontrol edilir.
+2. VDS kurulumunuz hazırlanır.
+3. IP adresi ve giriş şifreniz WhatsApp üzerinden iletilir.
+4. RustDesk ile kasmadan, daha akıcı şekilde bağlantı sağlayabilirsiniz.
+
+Önemli not kutusu:
+Lütfen sipariş formunda yazdığınız WhatsApp numarasını kontrol edin. Teslimat ve destek süreci WhatsApp üzerinden ilerler.
+
+RustDesk indirme bölümü:
+Başlık:
+RustDesk ile Daha Akıcı Bağlantı
+
+Açıklama:
+VDS bağlantısında daha iyi ekran akıcılığı ve kullanım deneyimi için genellikle RustDesk öneriyoruz. Windows, Android ve iPhone cihazlarınızdan RustDesk ile kolayca bağlantı sağlayabilirsiniz.
+
+İndirme butonları:
+1. Windows İçin İndir
+Link:
+https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.exe
+
+2. Android APK İndir
+Link:
+https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-aarch64-signed.apk
+
+3. iPhone / App Store
+Link:
+https://apps.apple.com/us/app/rustdesk-remote-desktop/id1581225015
+
+iPhone açıklaması:
+App Store’da “RustDesk” yazarak da uygulamayı bulabilirsiniz.
+
+RustDesk kullanım adımları bölümü:
+Başlık:
+RustDesk ile Nasıl Bağlanılır?
+
+Adım 1:
+RustDesk uygulamasını cihazınıza indirin ve kurun.
+
+Adım 2:
+WhatsApp üzerinden size iletilen IP adresini veya bağlantı ID bilgisini RustDesk üzerinde ilgili alana girin.
+
+Adım 3:
+Şifre alanına tarafınıza iletilen şifreyi yazın.
+
+Adım 4:
+Tekrar tekrar şifre girmemek için güvenli ve size ait cihazlarda “Parolayı Hatırla” seçeneğini işaretleyebilirsiniz.
+
+Adım 5:
+Bağlantı sağlandıktan sonra Display / Ekran ayarları bölümünden ekran çözünürlüğünü cihazınıza uygun şekilde ayarlayabilirsiniz.
+
+Adım 6:
+Bağlantı sonrası oyun hesabınızı kontrol edebilir, pazar, farm veya EXP party kullanımınızı takip edebilirsiniz.
+
+Güvenlik notu:
+“Parolayı Hatırla” seçeneğini yalnızca kendi bilgisayarınızda veya güvenilir cihazlarınızda kullanın. Ortak kullanılan cihazlarda bu seçeneği işaretlemeyin.
+
+Destek CTA alanı:
+Başlık:
+Yardıma mı ihtiyacınız var?
+
+Açıklama:
+Kurulum, bağlantı veya RustDesk kullanımıyla ilgili destek almak için WhatsApp üzerinden bizimle iletişime geçebilirsiniz.
+
+Butonlar:
+- WhatsApp Destek ile Görüş
+- Ana Sayfaya Dön
+- Paketleri İncele
+
+WhatsApp mesajı:
+Merhaba, Oyuncu VDS siparişim sonrası kurulum ve RustDesk bağlantısı için destek almak istiyorum.
+
+Ek bilgi:
+Bu başarı ekranı sadece ödeme başarılı olduğunda gösterilsin.
+Ödeme başarısızsa ayrı bir hata ekranı gösterilsin.
+
+Başarısız ödeme ekranı:
+Başlık:
+ÖDEME TAMAMLANAMADI
+
+Açıklama:
+Ödemeniz tamamlanamadı. Lütfen tekrar deneyin veya WhatsApp destek üzerinden bizimle iletişime geçin.
+
+Butonlar:
+- Tekrar Dene
+- WhatsApp Destek
+
+Mobil davranış:
+- İndirme butonları mobilde alt alta gelsin.
+- RustDesk kullanım adımları mobilde tek kolon olarak gösterilsin.
+- Başarı ekranı çok uzun olsa bile okunabilir ve düzenli olsun.
+- WhatsApp destek butonu sabit floating olarak kalabilir.
