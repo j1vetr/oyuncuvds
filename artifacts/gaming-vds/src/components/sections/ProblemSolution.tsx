@@ -27,9 +27,9 @@ export function ProblemSolution() {
         {/* Section header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
-            <span className="w-6 h-px bg-primary" />
+            <span className="text-primary/50 text-[10px] font-bold select-none">|</span>
             <span className="text-[11px] font-bold uppercase tracking-[3px] text-primary">Neden Farklı?</span>
-            <span className="w-6 h-px bg-primary" />
+            <span className="text-primary/50 text-[10px] font-bold select-none">|</span>
           </div>
           <h2 className="text-[32px] md:text-[48px] font-black uppercase tracking-tight text-white mb-4">
             NEDEN OYUNCU VDS?

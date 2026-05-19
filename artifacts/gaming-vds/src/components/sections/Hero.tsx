@@ -49,11 +49,11 @@ export function Hero({ onOpenOrder }: HeroProps) {
       <div className="container mx-auto px-4 flex flex-col items-center text-center relative pb-16" style={{ zIndex: 2 }}>
         {/* Eyebrow label */}
         <div className="inline-flex items-center gap-2 mb-6">
-          <span className="w-6 h-px bg-primary" />
+          <span className="text-primary/50 text-[10px] font-bold select-none">|</span>
           <span className="text-[11px] font-bold uppercase tracking-[3px] text-primary">
             7/24 Oyun VDS Hizmeti
           </span>
-          <span className="w-6 h-px bg-primary" />
+          <span className="text-primary/50 text-[10px] font-bold select-none">|</span>
         </div>
 
         <h1 className="text-[38px] md:text-[68px] font-black uppercase text-white leading-[1.05] tracking-tight max-w-5xl mb-6">
