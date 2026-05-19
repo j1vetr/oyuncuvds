@@ -1,35 +1,27 @@
-import { Server, ShieldCheck, Zap, Globe, HardDrive } from "lucide-react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 };
 
-const FEATURES = [
+const GAMES = [
   {
-    icon: Server,
-    title: "7/24 Açık Kullanım",
-    desc: "Bilgisayarınızı açık bırakmanıza gerek kalmaz.",
+    name: "Knight Online",
+    image: "/game-knight.jpg",
+    logo: "/logo-knight.png",
+    tags: ["Pazar", "Farm", "EXP Party"],
   },
   {
-    icon: ShieldCheck,
-    title: "Windows 10 Kurulu",
-    desc: "Teslim alır almaz uzak masaüstü ile bağlanabilirsiniz.",
+    name: "Metin2",
+    image: "/game-metin2.jpg",
+    logo: "/logo-metin2.png",
+    tags: ["Pazar", "Farm", "EXP Party"],
   },
   {
-    icon: Zap,
-    title: "vGPU Destekli",
-    desc: "Oyun istemcileri için daha uyumlu grafik altyapısı.",
-  },
-  {
-    icon: Globe,
-    title: "Limitsiz Trafik",
-    desc: "Uzun süreli kullanımda kota derdi yaşamazsınız.",
-  },
-  {
-    icon: HardDrive,
-    title: "NVMe SSD Disk",
-    desc: "Daha hızlı açılış ve daha akıcı kullanım deneyimi.",
+    name: "Silkroad Online",
+    image: "/game-silkroad.jpg",
+    logo: "/logo-silkroad.png",
+    tags: ["Pazar", "Farm", "EXP Party"],
   },
 ];
 
@@ -55,15 +47,15 @@ export function Hero() {
         <div className="inline-flex items-center gap-2 mb-6">
           <span className="w-6 h-px bg-primary" />
           <span className="text-[11px] font-bold uppercase tracking-[3px] text-primary">
-            7/24 OYUN VDS HİZMETİ
+            7/24 Oyun VDS Hizmeti
           </span>
           <span className="w-6 h-px bg-primary" />
         </div>
 
         <h1 className="text-[38px] md:text-[68px] font-black uppercase text-white leading-[1.05] tracking-tight max-w-5xl mb-6">
-          BİLGİSAYARIN KAPALIYKEN
+          Bilgisayarın Kapalıyken
           <br />
-          <span className="text-primary">OYUN HESABIN</span> AÇIK KALSIN
+          <span className="text-primary">Oyun Hesabın</span> Açık Kalsın
         </h1>
 
         <p className="text-[15px] md:text-[17px] font-light text-[#d1d1d1] max-w-2xl mb-12 leading-[1.85]">
@@ -77,14 +69,14 @@ export function Hero() {
             className="w-full md:w-auto h-14 px-10 bg-primary text-black font-black uppercase tracking-[2px] text-sm hover:bg-primary/90 transition-colors"
             data-testid="button-hero-packages"
           >
-            PAKETLERİ İNCELE
+            Paketleri İncele
           </button>
           <button
             onClick={() => scrollTo("siparis")}
             className="w-full md:w-auto h-14 px-10 bg-transparent border border-white text-white font-bold uppercase tracking-[2px] text-sm hover:bg-white/10 transition-colors"
             data-testid="button-hero-order"
           >
-            SİPARİŞ VER
+            Sipariş Ver
           </button>
           <a
             href="https://wa.me/905000000000" target="_blank" rel="noreferrer"
@@ -92,27 +84,61 @@ export function Hero() {
             data-testid="button-hero-whatsapp"
           >
             <WhatsAppIcon size={19} className="text-[#25D366]" />
-            WHATSAPP DESTEK
+            Whatsapp Destek
           </a>
         </div>
       </div>
 
-      {/* Feature bar — sits at the bottom of the hero, on top of the image */}
+      {/* Game cards bar — bottom of hero */}
       <div className="relative w-full mt-auto" style={{ zIndex: 2 }}>
-        <div className="w-full bg-black/80 backdrop-blur-sm border-t border-[#2a2a2a]">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 lg:divide-x divide-[#2a2a2a]">
-              {FEATURES.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-4 px-6 py-6">
-                  <Icon size={22} className="text-primary mt-0.5 shrink-0" />
-                  <div className="text-left">
-                    <p className="text-[12px] font-black uppercase tracking-[1.5px] text-white mb-1">{title}</p>
-                    <p className="text-[12px] font-light text-[#888] leading-snug">{desc}</p>
-                  </div>
+        {/* Subtle top separator */}
+        <div className="w-full h-px bg-white/10" />
+        <div className="grid grid-cols-3">
+          {GAMES.map((game, idx) => (
+            <div
+              key={game.name}
+              className={`group relative h-36 overflow-hidden cursor-pointer ${
+                idx < GAMES.length - 1 ? "border-r border-white/10" : ""
+              }`}
+              onClick={() => scrollTo("desteklenen-oyunlar")}
+            >
+              {/* Background image */}
+              <img
+                src={game.image}
+                alt={game.name}
+                className="absolute inset-0 w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-transform duration-500"
+              />
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
+              {/* Hover tint */}
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300" />
+
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col justify-end p-5">
+                {/* Logo */}
+                <img
+                  src={game.logo}
+                  alt={`${game.name} logo`}
+                  className="h-5 w-auto object-contain object-left mb-2 opacity-80 group-hover:opacity-100 transition-opacity"
+                  style={{ filter: "drop-shadow(0 1px 6px rgba(0,0,0,1))" }}
+                />
+                {/* Tags */}
+                <div className="flex gap-1.5 flex-wrap">
+                  {game.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[9px] font-bold uppercase tracking-[1px] px-1.5 py-0.5 border border-white/20 text-white/60"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-              ))}
+              </div>
+
+              {/* Top hover glow */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary opacity-0 group-hover:opacity-70 transition-opacity duration-300" />
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
