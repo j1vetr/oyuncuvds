@@ -44,14 +44,6 @@ export default function PaymentSuccess() {
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-primary selection:text-black">
 
-      {/* Top bar */}
-      <div className="border-b border-[#1a1a1a] px-6 py-4 flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2">
-          <img src="/logo.svg" alt="Oyuncu VDS" className="h-8 w-auto" onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
-          <span className="font-black text-white uppercase tracking-[2px] text-sm">Oyuncu VDS</span>
-        </a>
-      </div>
-
       <main className="container mx-auto px-4 py-12 max-w-2xl">
 
         {/* Success header */}
