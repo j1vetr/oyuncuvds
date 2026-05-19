@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { ProblemSolution } from "@/components/sections/ProblemSolution";
@@ -6,11 +6,12 @@ import { Packages } from "@/components/sections/Packages";
 import { Games } from "@/components/sections/Games";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { OrderModal } from "@/components/sections/OrderModal";
-import { Support } from "@/components/sections/Support";
-import { FAQ } from "@/components/sections/FAQ";
-import { Footer } from "@/components/sections/Footer";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import type { PackageId, BillingPeriod } from "@/config/packages";
+
+const Support = lazy(() => import("@/components/sections/Support").then((m) => ({ default: m.Support })));
+const FAQ = lazy(() => import("@/components/sections/FAQ").then((m) => ({ default: m.FAQ })));
+const Footer = lazy(() => import("@/components/sections/Footer").then((m) => ({ default: m.Footer })));
 
 export default function Home() {
   useEffect(() => {
@@ -36,11 +37,15 @@ export default function Home() {
         <Packages onSelectPackage={(pkgId, billing) => openOrder(pkgId, billing)} />
         <Games />
         <HowItWorks />
-        <Support />
-        <FAQ />
+        <Suspense fallback={null}>
+          <Support />
+          <FAQ />
+        </Suspense>
       </main>
 
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
       <WhatsAppButton />
 
       <OrderModal

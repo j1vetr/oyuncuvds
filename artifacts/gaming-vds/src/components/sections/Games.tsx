@@ -66,6 +66,8 @@ export function Games() {
                     <img
                       src={game.image}
                       alt={game.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-center scale-105 group-hover:scale-110 transition-transform duration-500"
                     />
                     {/* Gradient overlay */}
@@ -105,6 +107,8 @@ export function Games() {
                     <img
                       src={game.logo}
                       alt={`${game.name} logo`}
+                      loading="lazy"
+                      decoding="async"
                       className="h-6 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                       style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.9))" }}
                     />

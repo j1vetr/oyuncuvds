@@ -57,6 +57,18 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    target: "es2020",
+    cssCodeSplit: true,
+    reportCompressedSize: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor-react": ["react", "react-dom"],
+          "vendor-ui": ["lucide-react", "@hookform/resolvers", "react-hook-form"],
+          "vendor-query": ["@tanstack/react-query"],
+        },
+      },
+    },
   },
   server: {
     port,
