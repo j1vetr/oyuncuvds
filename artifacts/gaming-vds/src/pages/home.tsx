@@ -11,6 +11,7 @@ import type { PackageId, BillingPeriod } from "@/config/packages";
 
 const Support = lazy(() => import("@/components/sections/Support").then((m) => ({ default: m.Support })));
 const FAQ = lazy(() => import("@/components/sections/FAQ").then((m) => ({ default: m.FAQ })));
+const Contact = lazy(() => import("@/components/sections/Contact").then((m) => ({ default: m.Contact })));
 const Footer = lazy(() => import("@/components/sections/Footer").then((m) => ({ default: m.Footer })));
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
         <Suspense fallback={null}>
           <Support />
           <FAQ />
+          <Contact />
         </Suspense>
       </main>
 

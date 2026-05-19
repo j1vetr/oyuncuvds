@@ -29,6 +29,7 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
           <button onClick={() => scrollTo("paketler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">Paketler</button>
           <button onClick={() => scrollTo("nasil-calisir")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">Nasıl Çalışır?</button>
           <button onClick={() => scrollTo("sss")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">SSS</button>
+          <button onClick={() => scrollTo("iletisim")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#d8d8d8] hover:text-primary transition-colors">İletişim</button>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
@@ -49,6 +50,7 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
           <button onClick={() => scrollTo("paketler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">Paketler</button>
           <button onClick={() => scrollTo("nasil-calisir")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">Nasıl Çalışır?</button>
           <button onClick={() => scrollTo("sss")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">SSS</button>
+          <button onClick={() => scrollTo("iletisim")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">İletişim</button>
           <hr className="border-[#3c3c3c]" />
           <button className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm border border-white text-white w-full">Whatsapp Destek</button>
           <button onClick={() => { onOpenOrder?.(); setIsOpen(false); }} className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm bg-primary text-black w-full">Sipariş Ver</button>
