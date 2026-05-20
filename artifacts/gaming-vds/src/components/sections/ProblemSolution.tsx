@@ -92,7 +92,7 @@ export function ProblemSolution() {
   return (
     <section
       id="ozellikler"
-      className="relative w-full bg-white pt-10 md:pt-14 pb-20 md:pb-24 overflow-x-clip"
+      className="relative w-full bg-white pt-10 md:pt-14 pb-14 md:pb-16 overflow-x-clip"
     >
       {/* Soft background accents */}
       <div

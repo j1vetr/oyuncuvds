@@ -66,14 +66,14 @@ export function Packages({ onSelectPackage }: PackagesProps) {
   return (
     <section
       id="paketler"
-      className="relative w-full bg-white py-20 md:py-24 overflow-x-clip"
+      className="relative w-full bg-[#f7f7f7] pt-16 md:pt-20 pb-20 md:pb-24 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft background accents */}
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse 40% 50% at 5% 30%, rgba(0,82,255,0.06), transparent 60%), radial-gradient(ellipse 40% 50% at 95% 70%, rgba(0,82,255,0.06), transparent 60%)",
+            "radial-gradient(ellipse 40% 50% at 5% 30%, rgba(0,82,255,0.05), transparent 60%), radial-gradient(ellipse 40% 50% at 95% 70%, rgba(0,82,255,0.05), transparent 60%)",
         }}
       />
 
