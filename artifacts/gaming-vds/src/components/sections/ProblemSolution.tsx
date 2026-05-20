@@ -92,7 +92,7 @@ export function ProblemSolution() {
   return (
     <section
       id="ozellikler"
-      className="relative w-full bg-white py-24 md:py-28 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-white py-14 md:py-16 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft background accents */}
       <div
@@ -104,7 +104,7 @@ export function ProblemSolution() {
       />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-14 max-w-2xl mx-auto">
+        <div className="text-center mb-8 max-w-2xl mx-auto">
           <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] mb-4">
             Neden Farklı?
           </span>

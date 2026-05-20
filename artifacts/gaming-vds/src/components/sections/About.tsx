@@ -50,7 +50,7 @@ export function About() {
   return (
     <section
       id="hakkimizda"
-      className="relative w-full bg-white py-24 md:py-28 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-white py-14 md:py-16 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft dot pattern */}
       <div
@@ -73,7 +73,7 @@ export function About() {
 
       <div className="container mx-auto px-4">
         {/* Top: split header + image */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center mb-12 md:mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center mb-8 md:mb-10">
           <div>
             <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] bg-[#e6edff] rounded-full px-3 py-1 mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#0052ff]" />

@@ -38,7 +38,7 @@ export function Games() {
   return (
     <section
       id="desteklenen-oyunlar"
-      className="relative w-full bg-white py-24 md:py-28 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-white py-14 md:py-16 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft dot pattern accents */}
       <div
@@ -54,7 +54,7 @@ export function Games() {
       />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 max-w-xl mx-auto">
+        <div className="text-center mb-8 max-w-xl mx-auto">
           <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] bg-[#e6edff] rounded-full px-3 py-1 mb-5">
             Uyumlu Platformlar
           </span>

@@ -66,7 +66,7 @@ export function Packages({ onSelectPackage }: PackagesProps) {
   return (
     <section
       id="paketler"
-      className="relative w-full bg-[#f7f7f7] py-24 md:py-28 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-[#f7f7f7] py-14 md:py-16 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft background accents */}
       <div
@@ -78,7 +78,7 @@ export function Packages({ onSelectPackage }: PackagesProps) {
       />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 max-w-xl mx-auto">
+        <div className="text-center mb-8 max-w-xl mx-auto">
           <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] mb-4">
             Fiyatlandırma
           </span>
