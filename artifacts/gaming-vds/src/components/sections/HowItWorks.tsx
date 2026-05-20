@@ -1,4 +1,4 @@
-import { ArrowRight, Package2, Clock, ShieldCheck, Send, ShieldCheck as ShieldIcon } from "lucide-react";
+import { ArrowRight, ShieldCheck as ShieldIcon } from "lucide-react";
 import iconStep1 from "@assets/5a408312-b76b-45e1-be7e-2aec89fcd923_1779239395636.png";
 import iconStep2 from "@assets/7b8469b6-df83-4f1c-b810-dc83ddc454d8_1779239395635.png";
 import iconStep3 from "@assets/e6cd9de8-e895-4a90-91ad-75abe5dd304a_1779239395636.png";
@@ -12,8 +12,6 @@ const steps = [
     title: "Paketini Seç",
     description:
       "İhtiyacına uygun Oyun VDS paketini seç. Aylık veya yıllık dönem seçeneğiyle fiyat avantajını belirle.",
-    detail: "Başlangıç veya Performans",
-    DetailIcon: Package2,
   },
   {
     number: "02",
@@ -21,8 +19,6 @@ const steps = [
     title: "Bilgilerini Gir",
     description:
       "Ad soyad, WhatsApp numarası ve e-posta adresini doldur. Teslimat bu bilgiler üzerinden yapılır.",
-    detail: "1 dakikadan az sürer",
-    DetailIcon: Clock,
   },
   {
     number: "03",
@@ -30,8 +26,6 @@ const steps = [
     title: "Güvenli Ödeme Yap",
     description:
       "Sipariş özetini incele. PayTR altyapısıyla güvenli ve hızlı şekilde ödemeyi tamamla.",
-    detail: "PayTR güvencesiyle",
-    DetailIcon: ShieldCheck,
   },
   {
     number: "04",
@@ -39,8 +33,6 @@ const steps = [
     title: "VDS'ini Teslim Al",
     description:
       "Ödeme sonrası VDS erişim bilgilerin (IP, şifre) WhatsApp üzerinden 30-60 dakika içinde iletilir.",
-    detail: "30-60 dk içinde teslim",
-    DetailIcon: Send,
   },
 ];
 
@@ -98,7 +90,6 @@ export function HowItWorks() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 xl:pr-[230px]">
             {steps.map((step, idx) => {
-              const DetailIcon = step.DetailIcon;
               return (
                 <div key={step.number} className="relative">
                   {/* Arrow between cards (desktop only) */}
@@ -134,16 +125,9 @@ export function HowItWorks() {
                     <h3 className="text-center text-[17px] font-bold tracking-tight text-[#0a0b0d] mb-2.5">
                       {step.title}
                     </h3>
-                    <p className="text-center text-[#5b616e] text-[13px] leading-[1.65] mb-5">
+                    <p className="text-center text-[#5b616e] text-[13px] leading-[1.65]">
                       {step.description}
                     </p>
-
-                    <div className="flex justify-center">
-                      <span className="inline-flex items-center gap-1.5 text-[11.5px] font-semibold text-[#0052ff] bg-[#e6edff] rounded-full pl-2 pr-3 py-1.5">
-                        <DetailIcon size={12} strokeWidth={2.5} />
-                        {step.detail}
-                      </span>
-                    </div>
                   </div>
                 </div>
               );
