@@ -108,7 +108,7 @@ export function ProblemSolution() {
           <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] mb-4">
             Neden Farklı?
           </span>
-          <h2 className="display-headline text-[36px] md:text-[52px] text-[#0a0b0d] mb-5">
+          <h2 className="display-headline font-bold text-[40px] md:text-[56px] text-[#0a0b0d] mb-5 tracking-[-0.02em]">
             Neden <span className="text-[#0052ff]">Oyuncu VDS?</span>
           </h2>
           <p className="text-[16px] text-[#5b616e] leading-[1.65]">
