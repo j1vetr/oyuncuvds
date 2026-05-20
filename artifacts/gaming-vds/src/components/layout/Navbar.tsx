@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
@@ -58,15 +58,20 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
             href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="h-10 px-5 font-semibold text-[13px] rounded-full bg-[#25D366] text-white hover:bg-[#1faf57] transition-colors flex items-center gap-2"
+            className="h-10 pl-2 pr-5 font-semibold text-[13px] rounded-full bg-white border border-[#dee1e6] text-[#0a0b0d] hover:border-[#25D366]/60 hover:bg-[#25D366]/[0.04] transition-colors flex items-center gap-2"
           >
-            <WhatsAppIcon size={15} />
+            <span className="w-7 h-7 rounded-full bg-[#25D366] flex items-center justify-center">
+              <WhatsAppIcon size={14} className="text-white" />
+            </span>
             WhatsApp
           </a>
           <button
             onClick={() => onOpenOrder?.()}
-            className="h-10 px-6 font-semibold text-[13px] rounded-full bg-[#0052ff] text-white hover:bg-[#003ecc] transition-colors"
+            className="h-10 pl-2 pr-5 font-semibold text-[13px] rounded-full bg-[#0052ff] text-white hover:bg-[#003ecc] transition-colors flex items-center gap-2"
           >
+            <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center">
+              <ShoppingCart size={14} className="text-white" />
+            </span>
             Sipariş Ver
           </button>
         </div>
