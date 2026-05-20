@@ -1,14 +1,6 @@
 import type * as React from "react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
-import {
-  Headphones,
-  Clock,
-  Activity,
-  Gamepad2,
-  ShieldCheck,
-  ArrowRight,
-  Check,
-} from "lucide-react";
+import { Headphones, Clock, Activity, Gamepad2, ArrowRight } from "lucide-react";
 
 // Brand: Windows logo (4 panes)
 function WindowsLogo({ size = 18 }: { size?: number }) {
@@ -76,11 +68,6 @@ const STATS: StatItem[] = [
     render: () => iconWrap("#0052ff", <Clock size={20} className="text-[#0052ff]" />),
   },
   {
-    title: "PayTR Güvenli Ödeme",
-    desc: "PayTR altyapısı ile güvenli ve hızlı ödeme.",
-    render: () => <PayTRBadge className="w-11 h-11 mb-3" />,
-  },
-  {
     title: "%99.9 Uptime",
     desc: "Yüksek performanslı altyapı ile kesintisiz çalışma.",
     render: () => iconWrap("#0052ff", <Activity size={20} className="text-[#0052ff]" />),
@@ -90,12 +77,6 @@ const STATS: StatItem[] = [
     desc: "Knight Online, Metin2 ve Silkroad ile tam uyum.",
     render: () => iconWrap("#0052ff", <Gamepad2 size={20} className="text-[#0052ff]" />),
   },
-];
-
-const QUICK_BENEFITS = [
-  "Pazar · Farm · EXP party",
-  "RustDesk hazır kurulu",
-  "30–60 dk içinde teslim",
 ];
 
 export function Hero({ onOpenOrder }: HeroProps) {
@@ -170,7 +151,7 @@ export function Hero({ onOpenOrder }: HeroProps) {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-8">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <button
                 onClick={() => scrollTo("paketler")}
                 className="group h-14 px-7 rounded-full bg-[#0052ff] text-white text-[15px] font-semibold hover:bg-[#003ecc] active:bg-[#003396] transition-all shadow-[0_8px_24px_-6px_rgba(0,82,255,0.45)] hover:shadow-[0_12px_28px_-6px_rgba(0,82,255,0.55)] flex items-center justify-center gap-2"
@@ -201,22 +182,6 @@ export function Hero({ onOpenOrder }: HeroProps) {
               </a>
             </div>
 
-            {/* Premium quick-benefit card under CTAs */}
-            <div className="inline-flex flex-wrap items-center gap-x-6 gap-y-2 rounded-2xl bg-white border border-[#dee1e6] shadow-[0_4px_16px_rgba(15,23,42,0.04)] px-5 py-3.5">
-              {QUICK_BENEFITS.map((b, i) => (
-                <span
-                  key={b}
-                  className={`flex items-center gap-2 text-[13px] font-medium text-[#0a0b0d] ${
-                    i > 0 ? "border-l border-[#eef0f3] pl-6" : ""
-                  }`}
-                >
-                  <span className="w-5 h-5 rounded-full bg-[#05b169]/10 flex items-center justify-center">
-                    <Check size={12} className="text-[#05b169]" strokeWidth={3} />
-                  </span>
-                  {b}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* RIGHT: Device mockup with floating cards */}
@@ -239,82 +204,6 @@ export function Hero({ onOpenOrder }: HeroProps) {
                 filter: "blur(2px)",
               }}
             />
-
-            {/* Float card: Windows 10 (top-right) */}
-            <div
-              className="hidden lg:flex absolute top-0 right-0 z-20 items-center gap-3 bg-white/95 backdrop-blur rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_-8px_rgba(15,23,42,0.18)] px-4 py-3 w-[200px]"
-              style={{ animation: "heroFloat 6s ease-in-out infinite" }}
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#0078D4]/10 flex items-center justify-center shrink-0">
-                <WindowsLogo size={18} />
-              </div>
-              <div className="leading-tight">
-                <p className="text-[13px] font-semibold text-[#0a0b0d]">Windows 10</p>
-                <p className="text-[11px] text-[#5b616e]">Kurulu ve hazır sistem</p>
-              </div>
-            </div>
-
-            {/* Float card: 30-60 dk (middle-right) */}
-            <div
-              className="hidden lg:flex absolute top-[42%] right-0 z-20 items-center gap-3 bg-white/95 backdrop-blur rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_-8px_rgba(15,23,42,0.18)] px-4 py-3 w-[200px]"
-              style={{ animation: "heroFloat 7s ease-in-out infinite 0.5s" }}
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#a855f7]/10 flex items-center justify-center shrink-0">
-                <Clock size={18} className="text-[#a855f7]" />
-              </div>
-              <div className="leading-tight">
-                <p className="text-[13px] font-semibold text-[#0a0b0d]">30–60 dk</p>
-                <p className="text-[11px] text-[#5b616e]">Hızlı teslimat</p>
-              </div>
-            </div>
-
-            {/* Float card: PayTR (bottom-right) */}
-            <div
-              className="hidden lg:flex absolute bottom-2 right-0 z-20 items-center gap-3 bg-white/95 backdrop-blur rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_-8px_rgba(15,23,42,0.18)] px-4 py-3 w-[220px]"
-              style={{ animation: "heroFloat 8s ease-in-out infinite 1s" }}
-            >
-              <PayTRBadge className="w-10 h-10 shrink-0" />
-              <div className="leading-tight">
-                <p className="text-[13px] font-semibold text-[#0a0b0d]">
-                  Güvenli Ödeme
-                </p>
-                <p className="text-[11px] text-[#5b616e]">
-                  PayTR altyapısı ile güvenli ödeme
-                </p>
-              </div>
-            </div>
-
-            {/* Float card: 7/24 Aktif (top-left) */}
-            <div
-              className="hidden lg:flex absolute top-8 left-0 z-20 items-center gap-3 bg-white/95 backdrop-blur rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_-8px_rgba(15,23,42,0.18)] px-4 py-3 w-[200px]"
-              style={{ animation: "heroFloat 7s ease-in-out infinite 0.3s" }}
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#05b169]/10 flex items-center justify-center shrink-0">
-                <Activity size={18} className="text-[#05b169]" />
-              </div>
-              <div className="leading-tight">
-                <p className="text-[13px] font-semibold text-[#0a0b0d]">7/24 Aktif</p>
-                <p className="text-[11px] text-[#5b616e]">Kesintisiz hizmet</p>
-              </div>
-            </div>
-
-            {/* Float card: Güvenli Erişim (bottom-left) */}
-            <div
-              className="hidden lg:flex absolute bottom-20 left-0 z-20 items-center gap-3 bg-white/95 backdrop-blur rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_-8px_rgba(15,23,42,0.18)] px-4 py-3 w-[220px]"
-              style={{ animation: "heroFloat 8s ease-in-out infinite 0.8s" }}
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#5b616e]/10 flex items-center justify-center shrink-0">
-                <ShieldCheck size={18} className="text-[#5b616e]" />
-              </div>
-              <div className="leading-tight">
-                <p className="text-[13px] font-semibold text-[#0a0b0d]">
-                  Güvenli Erişim
-                </p>
-                <p className="text-[11px] text-[#5b616e]">
-                  Uzak masaüstü ile güvenli bağlantı
-                </p>
-              </div>
-            </div>
 
             {/* Device mockup image with subtle drop-shadow */}
             <img
