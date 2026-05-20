@@ -38,11 +38,11 @@ export function FAQ() {
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-3xl border border-[#dee1e6] overflow-hidden">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className={`${idx > 0 ? "border-t border-[#eef0f3]" : ""}`}
+              className="bg-white rounded-2xl border border-[#dee1e6] overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
