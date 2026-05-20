@@ -107,14 +107,6 @@ export function Hero({ onOpenOrder }: HeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-12 lg:gap-10 items-center">
           {/* LEFT: Copy + CTAs + quick benefits */}
           <div className="relative">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#dee1e6] shadow-[0_2px_8px_rgba(15,23,42,0.04)] text-[#0052ff] text-[12px] font-semibold tracking-tight mb-7">
-              <span className="relative flex w-1.5 h-1.5">
-                <span className="absolute inset-0 rounded-full bg-[#0052ff] opacity-60 animate-ping" />
-                <span className="relative w-1.5 h-1.5 rounded-full bg-[#0052ff]" />
-              </span>
-              7/24 Oyun VDS Hizmeti
-            </span>
-
             <h1 className="display-headline text-[42px] sm:text-[54px] lg:text-[58px] xl:text-[68px] text-[#0a0b0d] leading-[1.04] tracking-[-0.02em] mb-7">
               Bilgisayarın
               <br />
