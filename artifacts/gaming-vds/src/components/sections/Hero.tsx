@@ -81,7 +81,7 @@ const STATS: StatItem[] = [
 
 export function Hero({ onOpenOrder }: HeroProps) {
   return (
-    <section className="relative w-full bg-white pt-12 md:pt-16 pb-20 md:pb-28 overflow-x-clip">
+    <section className="relative w-full bg-white pt-12 md:pt-16 pb-10 md:pb-14 overflow-x-clip">
       {/* Background decoration: layered radial glows + dot grid */}
       <div
         className="pointer-events-none absolute inset-0 -z-10"
@@ -191,7 +191,7 @@ export function Hero({ onOpenOrder }: HeroProps) {
         </div>
 
         {/* Premium bottom stat strip with vertical dividers */}
-        <div className="mt-20 md:mt-28 rounded-3xl border border-[#dee1e6] bg-white shadow-[0_8px_28px_rgba(15,23,42,0.04)] overflow-hidden">
+        <div className="mt-14 md:mt-20 rounded-3xl border border-[#dee1e6] bg-white shadow-[0_8px_28px_rgba(15,23,42,0.04)] overflow-hidden">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {STATS.map(({ render, title, desc }, idx) => (
               <div
