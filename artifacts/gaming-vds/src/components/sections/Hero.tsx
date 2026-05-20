@@ -1,14 +1,32 @@
+import type * as React from "react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
-import {
-  Headphones,
-  MonitorCheck,
-  Clock,
-  CreditCard,
-  Activity,
-  Gamepad2,
-  ShieldCheck,
-  Monitor,
-} from "lucide-react";
+import { Headphones, Clock, Activity, Gamepad2, ShieldCheck } from "lucide-react";
+
+// Brand: Windows logo (4 panes)
+function WindowsLogo({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 4.5L10.5 3.3V11.4H2V4.5Z" fill="#0078D4" />
+      <path d="M11.5 3.15L22 1.7V11.4H11.5V3.15Z" fill="#0078D4" />
+      <path d="M2 12.6H10.5V20.7L2 19.5V12.6Z" fill="#0078D4" />
+      <path d="M11.5 12.6H22V22.3L11.5 20.85V12.6Z" fill="#0078D4" />
+    </svg>
+  );
+}
+
+// Brand: PayTR wordmark badge
+function PayTRBadge({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`flex items-center justify-center bg-[#0052ff] text-white font-bold rounded-lg ${className}`}
+    >
+      <span className="leading-none">
+        <span className="text-[10px]">Pay</span>
+        <span className="text-[11px]">TR</span>
+      </span>
+    </div>
+  );
+}
 
 const scrollTo = (id: string) => {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -18,36 +36,51 @@ interface HeroProps {
   onOpenOrder?: () => void;
 }
 
-const STATS = [
+type StatItem = {
+  title: string;
+  desc: string;
+  render: () => React.ReactNode;
+};
+
+const iconWrap = (color: string, child: React.ReactNode) => (
+  <div
+    className="w-11 h-11 rounded-full flex items-center justify-center mb-3"
+    style={{ backgroundColor: `${color}1a` }}
+  >
+    {child}
+  </div>
+);
+
+const STATS: StatItem[] = [
   {
-    icon: Headphones,
     title: "7/24 Kesintisiz Hizmet",
     desc: "Oyun hesaplarınız günün her saati açık kalır.",
+    render: () => iconWrap("#5b616e", <Headphones size={20} className="text-[#5b616e]" />),
   },
   {
-    icon: MonitorCheck,
     title: "Windows 10 Kurulu",
     desc: "Hazır sistem, sürücüler ve güncellemeler yüklü.",
+    render: () => iconWrap("#0078D4", <WindowsLogo size={20} />),
   },
   {
-    icon: Clock,
     title: "30–60 dk Teslimat",
     desc: "Siparişinizin ardından hızlıca teslim edilir.",
+    render: () => iconWrap("#0052ff", <Clock size={20} className="text-[#0052ff]" />),
   },
   {
-    icon: CreditCard,
     title: "PayTR Güvenli Ödeme",
     desc: "PayTR altyapısı ile güvenli ve hızlı ödeme.",
+    render: () => <PayTRBadge className="w-11 h-11 mb-3" />,
   },
   {
-    icon: Activity,
     title: "%99.9 Uptime",
     desc: "Yüksek performanslı altyapı ile kesintisiz çalışma.",
+    render: () => iconWrap("#0052ff", <Activity size={20} className="text-[#0052ff]" />),
   },
   {
-    icon: Gamepad2,
     title: "Oyunlara Tam Uyum",
     desc: "Knight Online, Metin2 ve Silkroad ile tam uyum.",
+    render: () => iconWrap("#0052ff", <Gamepad2 size={20} className="text-[#0052ff]" />),
   },
 ];
 
@@ -134,8 +167,8 @@ export function Hero({ onOpenOrder }: HeroProps) {
               className="hidden lg:flex absolute top-2 right-0 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_8px_24px_rgba(15,23,42,0.06)] px-4 py-3 w-[190px]"
               style={{ animation: "heroFloat 6s ease-in-out infinite" }}
             >
-              <div className="w-10 h-10 rounded-full bg-[#0052ff]/10 flex items-center justify-center shrink-0">
-                <Monitor size={18} className="text-[#0052ff]" />
+              <div className="w-10 h-10 rounded-full bg-[#0078D4]/10 flex items-center justify-center shrink-0">
+                <WindowsLogo size={18} />
               </div>
               <div className="leading-tight">
                 <p className="text-[13px] font-semibold text-[#0a0b0d]">Windows 10</p>
@@ -148,8 +181,8 @@ export function Hero({ onOpenOrder }: HeroProps) {
               className="hidden lg:flex absolute top-[40%] right-0 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_8px_24px_rgba(15,23,42,0.06)] px-4 py-3 w-[190px]"
               style={{ animation: "heroFloat 7s ease-in-out infinite 0.5s" }}
             >
-              <div className="w-10 h-10 rounded-full bg-[#0052ff]/10 flex items-center justify-center shrink-0">
-                <Clock size={18} className="text-[#0052ff]" />
+              <div className="w-10 h-10 rounded-full bg-[#a855f7]/10 flex items-center justify-center shrink-0">
+                <Clock size={18} className="text-[#a855f7]" />
               </div>
               <div className="leading-tight">
                 <p className="text-[13px] font-semibold text-[#0a0b0d]">30–60 dk</p>
@@ -162,9 +195,7 @@ export function Hero({ onOpenOrder }: HeroProps) {
               className="hidden lg:flex absolute bottom-6 right-0 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_8px_24px_rgba(15,23,42,0.06)] px-4 py-3 w-[210px]"
               style={{ animation: "heroFloat 8s ease-in-out infinite 1s" }}
             >
-              <div className="w-10 h-10 rounded-full bg-[#0052ff]/10 flex items-center justify-center shrink-0">
-                <CreditCard size={18} className="text-[#0052ff]" />
-              </div>
+              <PayTRBadge className="w-10 h-10 shrink-0" />
               <div className="leading-tight">
                 <p className="text-[13px] font-semibold text-[#0a0b0d]">
                   Güvenli Ödeme
@@ -194,8 +225,8 @@ export function Hero({ onOpenOrder }: HeroProps) {
               className="hidden lg:flex absolute bottom-24 left-0 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_8px_24px_rgba(15,23,42,0.06)] px-4 py-3 w-[210px]"
               style={{ animation: "heroFloat 8s ease-in-out infinite 0.8s" }}
             >
-              <div className="w-10 h-10 rounded-full bg-[#0052ff]/10 flex items-center justify-center shrink-0">
-                <ShieldCheck size={18} className="text-[#0052ff]" />
+              <div className="w-10 h-10 rounded-full bg-[#5b616e]/10 flex items-center justify-center shrink-0">
+                <ShieldCheck size={18} className="text-[#5b616e]" />
               </div>
               <div className="leading-tight">
                 <p className="text-[13px] font-semibold text-[#0a0b0d]">
@@ -221,11 +252,9 @@ export function Hero({ onOpenOrder }: HeroProps) {
         {/* Bottom stat strip */}
         <div className="mt-16 md:mt-20 rounded-3xl border border-[#dee1e6] bg-white px-6 py-8 md:px-10 md:py-10">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-8">
-            {STATS.map(({ icon: Icon, title, desc }) => (
+            {STATS.map(({ render, title, desc }) => (
               <div key={title} className="flex flex-col items-center text-center">
-                <div className="w-11 h-11 rounded-full bg-[#0052ff]/10 flex items-center justify-center mb-3">
-                  <Icon size={20} className="text-[#0052ff]" />
-                </div>
+                {render()}
                 <p className="text-[13px] font-semibold text-[#0a0b0d] leading-tight mb-1">
                   {title}
                 </p>
