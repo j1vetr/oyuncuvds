@@ -50,7 +50,7 @@ export function About() {
   return (
     <section
       id="hakkimizda"
-      className="relative w-full bg-white py-20 md:py-24 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-white py-24 md:py-28 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft dot pattern */}
       <div

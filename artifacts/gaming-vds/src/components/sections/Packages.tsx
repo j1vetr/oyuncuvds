@@ -66,7 +66,7 @@ export function Packages({ onSelectPackage }: PackagesProps) {
   return (
     <section
       id="paketler"
-      className="relative w-full bg-[#f7f7f7] pt-16 md:pt-20 pb-20 md:pb-24 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-[#f7f7f7] py-24 md:py-28 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft background accents */}
       <div

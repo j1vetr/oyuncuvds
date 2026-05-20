@@ -40,7 +40,7 @@ export function HowItWorks() {
   return (
     <section
       id="nasil-calisir"
-      className="relative w-full bg-white py-20 md:py-24 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-[#f7f7f7] py-24 md:py-28 overflow-x-clip border-t border-[#dee1e6]"
     >
       {/* Soft dot pattern accents */}
       <div
