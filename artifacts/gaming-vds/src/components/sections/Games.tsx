@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Wifi, Clock, Swords, Flame, Compass } from "lucide-react";
+import { ArrowRight, Shield, Wifi, Clock } from "lucide-react";
 
 const games = [
   {
@@ -10,7 +10,6 @@ const games = [
     tags: ["Pazar", "Farm", "EXP Party"],
     accent: "#2563eb",
     accentSoft: "rgba(37, 99, 235, 0.18)",
-    Icon: Shield,
   },
   {
     id: "metin2",
@@ -21,7 +20,6 @@ const games = [
     tags: ["Pazar", "Farm", "EXP Party"],
     accent: "#e0492f",
     accentSoft: "rgba(224, 73, 47, 0.20)",
-    Icon: Flame,
   },
   {
     id: "silkroad",
@@ -32,7 +30,6 @@ const games = [
     tags: ["Pazar", "Farm", "EXP Party"],
     accent: "#10b981",
     accentSoft: "rgba(16, 185, 129, 0.18)",
-    Icon: Compass,
   },
 ];
 
@@ -71,7 +68,6 @@ export function Games() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-6xl mx-auto">
           {games.map((game) => {
-            const Icon = game.Icon;
             return (
               <div
                 key={game.id}
@@ -96,8 +92,8 @@ export function Games() {
                       alt={`${game.name} logo`}
                       loading="lazy"
                       decoding="async"
-                      className="h-8 w-auto object-contain"
-                      style={{ filter: "drop-shadow(0 2px 6px rgba(0,0,0,0.9))" }}
+                      className="h-14 md:h-16 w-auto object-contain"
+                      style={{ filter: "drop-shadow(0 3px 10px rgba(0,0,0,0.95))" }}
                     />
                   </div>
 
@@ -113,12 +109,6 @@ export function Games() {
                 {/* Body */}
                 <div className="relative flex flex-col flex-1 p-5 pt-4">
                   <div className="flex items-start gap-3 mb-3">
-                    <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                      style={{ backgroundColor: game.accent }}
-                    >
-                      <Icon size={18} className="text-white" />
-                    </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-[17px] font-bold tracking-tight text-white mb-1">
                         {game.name}
@@ -130,10 +120,10 @@ export function Games() {
                     <button
                       type="button"
                       aria-label={`${game.name} detay`}
-                      className="w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform group-hover:translate-x-0.5"
+                      className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform group-hover:translate-x-0.5 mt-1"
                       style={{ backgroundColor: game.accent }}
                     >
-                      <ArrowRight size={14} className="text-white" />
+                      <ArrowRight size={15} className="text-white" />
                     </button>
                   </div>
 
