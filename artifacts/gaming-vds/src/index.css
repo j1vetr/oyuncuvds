@@ -96,15 +96,15 @@
 }
 
 @layer utilities {
-  /* Coinbase-style display headline: weight 400 + tight tracking */
+  /* Premium SaaS display headline: bold weight + tight tracking */
   .display-headline {
-    font-weight: 400;
-    letter-spacing: -0.015em;
+    font-weight: 700;
+    letter-spacing: -0.022em;
     line-height: 1.05;
   }
   .display-headline-tight {
-    font-weight: 500;
-    letter-spacing: -0.025em;
+    font-weight: 800;
+    letter-spacing: -0.03em;
     line-height: 1.0;
   }
   /* Pill CTA helpers */
