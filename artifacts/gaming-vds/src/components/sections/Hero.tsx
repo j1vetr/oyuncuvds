@@ -120,7 +120,7 @@ export function Hero({ onOpenOrder }: HeroProps) {
               <br />
               kapalıyken
               <br />
-              <span className="text-[#0052ff]">oyun hesabın</span>
+              <span className="text-[#0052ff] uppercase">OYUN HESABIN</span>
               <br />
               açık kalsın.
             </h1>
