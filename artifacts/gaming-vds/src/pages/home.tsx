@@ -29,16 +29,16 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-primary selection:text-black">
+    <div className="min-h-screen bg-white text-[#0a0b0d] font-sans">
       <Navbar onOpenOrder={() => openOrder()} />
 
       <main>
         <Hero onOpenOrder={() => openOrder()} />
-        <About />
         <ProblemSolution />
         <Packages onSelectPackage={(pkgId, billing) => openOrder(pkgId, billing)} />
         <Games />
         <HowItWorks />
+        <About />
         <Suspense fallback={null}>
           <FAQ />
           <Contact />

@@ -11,33 +11,30 @@ export function Packages({ onSelectPackage }: PackagesProps) {
 
   const scrollToOrder = (pkgId: string) => {
     if (onSelectPackage) onSelectPackage(pkgId, billing);
-    document.getElementById("siparis")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section id="paketler" className="w-full bg-[#080808] py-16">
+    <section id="paketler" className="w-full bg-white py-20 md:py-24">
       <div className="container mx-auto px-4">
-
-        {/* Section header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-5 h-px bg-primary" />
-            <span className="text-[10px] font-bold uppercase tracking-[3px] text-primary">Fiyatlandırma</span>
-            <span className="w-5 h-px bg-primary" />
-          </div>
-          <h2 className="text-[28px] md:text-[38px] font-black uppercase text-white tracking-tight mb-3">
-            PAKETLER
+        <div className="text-center mb-12 max-w-xl mx-auto">
+          <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] mb-4">
+            Fiyatlandırma
+          </span>
+          <h2 className="display-headline text-[36px] md:text-[52px] text-[#0a0b0d] mb-4">
+            Paketler
           </h2>
-          <p className="text-[#c0c0c0] font-light text-[13px] max-w-lg mx-auto leading-[1.7] mb-8">
+          <p className="text-[#5b616e] text-[16px] leading-[1.65] mb-8">
             İhtiyacına göre paket seç. Yıllık alımda 2 ay ücretsiz kazan.
           </p>
 
           {/* Billing toggle */}
-          <div className="inline-flex border border-[#2e2e2e] bg-black p-1 gap-1">
+          <div className="inline-flex rounded-full bg-[#eef0f3] p-1">
             <button
               onClick={() => setBilling("aylik")}
-              className={`h-8 px-6 font-bold uppercase tracking-[1.5px] text-xs transition-colors ${
-                billing === "aylik" ? "bg-primary text-black" : "text-[#aaaaaa] hover:text-white"
+              className={`h-10 px-6 rounded-full text-[13px] font-semibold transition-colors ${
+                billing === "aylik"
+                  ? "bg-white text-[#0a0b0d] shadow-sm"
+                  : "text-[#5b616e] hover:text-[#0a0b0d]"
               }`}
               data-testid="toggle-billing-monthly"
             >
@@ -45,22 +42,21 @@ export function Packages({ onSelectPackage }: PackagesProps) {
             </button>
             <button
               onClick={() => setBilling("yillik")}
-              className={`h-8 px-6 font-bold uppercase tracking-[1.5px] text-xs transition-colors flex items-center gap-2 ${
-                billing === "yillik" ? "bg-primary text-black" : "text-[#aaaaaa] hover:text-white"
+              className={`h-10 px-6 rounded-full text-[13px] font-semibold transition-colors flex items-center gap-2 ${
+                billing === "yillik"
+                  ? "bg-white text-[#0a0b0d] shadow-sm"
+                  : "text-[#5b616e] hover:text-[#0a0b0d]"
               }`}
               data-testid="toggle-billing-yearly"
             >
               Yıllık
-              {billing !== "yillik" && (
-                <span className="text-[9px] font-black tracking-wider text-primary border border-primary/40 px-1 py-0.5 leading-none">
-                  2 AY ÜCRETSİZ
-                </span>
-              )}
+              <span className="text-[10px] font-bold text-[#05b169] bg-[#e7f7ee] rounded-full px-2 py-0.5">
+                2 AY ÜCRETSİZ
+              </span>
             </button>
           </div>
         </div>
 
-        {/* Cards */}
         <div className="grid md:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {packages.map((pkg) => {
             const basePrice = billing === "aylik" ? pkg.monthly : pkg.yearly;
@@ -71,102 +67,89 @@ export function Packages({ onSelectPackage }: PackagesProps) {
             return (
               <div
                 key={pkg.id}
-                className={`relative flex flex-col bg-[#0f0f0f] border ${
-                  pkg.isRecommended ? "border-primary/60" : "border-[#252525]"
+                className={`relative flex flex-col bg-white rounded-3xl border p-8 ${
+                  pkg.isRecommended
+                    ? "border-[#0052ff] shadow-[0_8px_32px_rgba(0,82,255,0.08)]"
+                    : "border-[#dee1e6]"
                 }`}
                 data-testid={`card-package-${pkg.id}`}
               >
-                <div className={`h-[2px] w-full ${pkg.isRecommended ? "bg-primary" : "bg-[#252525]"}`} />
-
                 {pkg.isRecommended && (
-                  <div className="absolute -top-[12px] right-5">
-                    <span className="bg-primary text-black text-[10px] font-black uppercase tracking-[1.5px] px-3 py-1 block">
-                      ÖNERİLEN PAKET
+                  <div className="absolute -top-3 left-8">
+                    <span className="inline-block bg-[#0052ff] text-white text-[11px] font-semibold tracking-tight rounded-full px-3 py-1">
+                      Önerilen Paket
                     </span>
                   </div>
                 )}
 
-                <div className="p-6 md:p-8 flex flex-col flex-1">
-                  {/* Name + description */}
-                  <div className="mb-5">
-                    <h3 className="text-[15px] font-black uppercase text-white tracking-tight mb-2">
-                      {pkg.name}
-                    </h3>
-                    <p className="text-[#a0a0a0] font-light text-[13px] leading-[1.65]">
-                      {pkg.description}
-                    </p>
-                  </div>
-
-                  {/* Price block */}
-                  <div className="mb-5 pb-5 border-b border-[#1e1e1e]">
-                    {billing === "yillik" && (
-                      <div className="mb-3">
-                        <span className="inline-block bg-primary/10 border border-primary/30 text-primary text-[9px] font-black uppercase tracking-[1.5px] px-2.5 py-1">
-                          10 AY ÖDE, 12 AY KULLAN
-                        </span>
-                      </div>
-                    )}
-
-                    <div className="flex items-baseline gap-1.5 mb-0.5">
-                      <span className="text-[38px] font-black text-white leading-none tracking-tight">
-                        {formatPrice(basePrice)}
-                      </span>
-                      <span className="text-[15px] font-bold text-white">TL</span>
-                    </div>
-                    <p className="text-[11px] font-light text-[#555] tracking-wide mb-2.5">
-                      + KDV / {period}
-                    </p>
-
-                    <div className="flex items-center gap-2">
-                      <span className="w-3 h-px bg-[#333]" />
-                      <p className="text-[12px] font-medium text-[#b0b0b0]">
-                        KDV Dahil{" "}
-                        <span className="text-white font-black">
-                          {formatPrice(totalPrice)} TL
-                        </span>
-                        {" "}/ {period}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Specs */}
-                  <ul className="space-y-2 mb-6 flex-1">
-                    {pkg.specs.map((spec) => (
-                      <li key={spec} className="flex items-center gap-2.5">
-                        <Check
-                          size={13}
-                          strokeWidth={3}
-                          className={pkg.isRecommended ? "text-primary shrink-0" : "text-[#444] shrink-0"}
-                        />
-                        <span className="text-[#c0c0c0] font-light text-[13px]">{spec}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* CTA */}
-                  <button
-                    onClick={() => scrollToOrder(pkg.id)}
-                    className={`w-full h-11 font-black uppercase tracking-[2px] text-xs transition-colors ${
-                      pkg.isRecommended
-                        ? "bg-primary text-black hover:bg-primary/90"
-                        : "bg-transparent border border-[#3c3c3c] text-white hover:border-white hover:bg-white/5"
-                    }`}
-                    data-testid={`button-select-${pkg.id}`}
-                  >
-                    BU PAKETİ SEÇ
-                  </button>
+                <div className="mb-6">
+                  <h3 className="text-[20px] font-semibold tracking-tight text-[#0a0b0d] mb-2">
+                    {pkg.name}
+                  </h3>
+                  <p className="text-[#5b616e] text-[14px] leading-[1.65]">
+                    {pkg.description}
+                  </p>
                 </div>
+
+                {/* Price */}
+                <div className="mb-6 pb-6 border-b border-[#eef0f3]">
+                  {billing === "yillik" && (
+                    <div className="mb-3">
+                      <span className="inline-block bg-[#e6edff] text-[#0052ff] text-[10px] font-bold uppercase tracking-[0.1em] rounded-full px-2.5 py-1">
+                        10 Ay Öde, 12 Ay Kullan
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex items-baseline gap-1.5 mb-1">
+                    <span className="text-[44px] font-medium text-[#0a0b0d] leading-none tracking-tight">
+                      {formatPrice(basePrice)}
+                    </span>
+                    <span className="text-[18px] font-medium text-[#0a0b0d]">TL</span>
+                  </div>
+                  <p className="text-[12px] text-[#7c828a] mb-3">
+                    + KDV / {period}
+                  </p>
+                  <p className="text-[13px] text-[#5b616e]">
+                    KDV Dahil{" "}
+                    <span className="text-[#0a0b0d] font-semibold">
+                      {formatPrice(totalPrice)} TL
+                    </span>{" "}
+                    / {period}
+                  </p>
+                </div>
+
+                <ul className="space-y-2.5 mb-7 flex-1">
+                  {pkg.specs.map((spec) => (
+                    <li key={spec} className="flex items-start gap-2.5">
+                      <Check
+                        size={16}
+                        strokeWidth={2.5}
+                        className={`shrink-0 mt-0.5 ${
+                          pkg.isRecommended ? "text-[#0052ff]" : "text-[#5b616e]"
+                        }`}
+                      />
+                      <span className="text-[#5b616e] text-[14px] leading-[1.55]">
+                        {spec}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  onClick={() => scrollToOrder(pkg.id)}
+                  className={`w-full h-12 rounded-full text-[14px] font-semibold transition-colors ${
+                    pkg.isRecommended
+                      ? "bg-[#0052ff] text-white hover:bg-[#003ecc]"
+                      : "bg-[#eef0f3] text-[#0a0b0d] hover:bg-[#dee1e6]"
+                  }`}
+                  data-testid={`button-select-${pkg.id}`}
+                >
+                  Bu Paketi Seç
+                </button>
               </div>
             );
           })}
         </div>
-      </div>
-
-      {/* Stripe divider */}
-      <div className="w-full h-[3px] mt-16 flex">
-        <div className="w-1/3 bg-primary h-full" />
-        <div className="w-1/3 bg-[#1c69d4] h-full" />
-        <div className="w-1/3 bg-[#0d3b85] h-full" />
       </div>
     </section>
   );

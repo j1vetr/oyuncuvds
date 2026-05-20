@@ -14,106 +14,101 @@
 
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-  --color-card-border: hsl(var(--card-border));
 
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-  --color-popover-border: hsl(var(--popover-border));
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-primary-border: var(--primary-border);
 
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-secondary-border: var(--secondary-border);
 
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-muted-border: var(--muted-border);
 
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-accent-border: var(--accent-border);
 
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-  --color-destructive-border: var(--destructive-border);
 
-  --color-chart-1: hsl(var(--chart-1));
-  --color-chart-2: hsl(var(--chart-2));
-  --color-chart-3: hsl(var(--chart-3));
-  --color-chart-4: hsl(var(--chart-4));
-  --color-chart-5: hsl(var(--chart-5));
-
-  --color-sidebar: hsl(var(--sidebar));
-  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
-  --color-sidebar-border: hsl(var(--sidebar-border));
-  --color-sidebar-primary: hsl(var(--sidebar-primary));
-  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
-  --color-sidebar-primary-border: var(--sidebar-primary-border);
-  --color-sidebar-accent: hsl(var(--sidebar-accent));
-  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
-  --color-sidebar-accent-border: var(--sidebar-accent-border);
-  --color-sidebar-ring: hsl(var(--sidebar-ring));
+  /* Coinbase-style surface tokens */
+  --color-surface-soft: #f7f7f7;
+  --color-surface-strong: #eef0f3;
+  --color-surface-dark: #0a0b0d;
+  --color-surface-dark-elevated: #16181c;
+  --color-hairline: #dee1e6;
+  --color-ink: #0a0b0d;
+  --color-body-text: #5b616e;
+  --color-muted-text: #7c828a;
 
   --font-sans: var(--app-font-sans);
   --font-serif: var(--app-font-serif);
   --font-mono: var(--app-font-mono);
-
-  --radius-sm: var(--radius);
-  --radius-md: var(--radius);
-  --radius-lg: var(--radius);
-  --radius-xl: var(--radius);
 }
 
-:root, .dark {
-  --background: 0 0% 0%;
-  --foreground: 0 0% 100%;
-  --card: 0 0% 10%;
-  --card-foreground: 0 0% 100%;
-  --popover: 0 0% 5%;
-  --popover-foreground: 0 0% 100%;
-  --primary: 186 100% 50%; /* Neon Cyan #00E5FF */
-  --primary-foreground: 0 0% 0%;
-  --secondary: 215 100% 47%; /* Electric Blue #1c69d4 */
-  --secondary-foreground: 0 0% 100%;
-  --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 73%; /* #bbbbbb */
-  --accent: 186 100% 50%;
-  --accent-foreground: 0 0% 0%;
-  --destructive: 0 84% 60%;
+:root {
+  --background: 0 0% 100%;
+  --foreground: 220 12% 5%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 12% 5%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 12% 5%;
+  --primary: 220 100% 50%; /* Coinbase Blue #0052ff */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 12% 96%;
+  --secondary-foreground: 220 12% 5%;
+  --muted: 0 0% 97%;        /* #f7f7f7 surface-soft */
+  --muted-foreground: 218 9% 40%; /* #5b616e body */
+  --accent: 220 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 354 73% 47%; /* #cf202f semantic down */
   --destructive-foreground: 0 0% 100%;
-  --border: 0 0% 24%; /* #3c3c3c */
-  --input: 0 0% 24%;
-  --ring: 186 100% 50%;
-  --radius: 0rem;
-  
-  --chart-1: 186 100% 50%;
-  --chart-2: 215 100% 47%;
-  --chart-3: 0 0% 73%;
-  --chart-4: 0 0% 24%;
-  --chart-5: 0 0% 10%;
+  --border: 215 11% 89%;    /* #dee1e6 hairline */
+  --input: 215 11% 89%;
+  --ring: 220 100% 50%;
+  --radius: 0.75rem;
 
-  --sidebar: 0 0% 5%;
-  --sidebar-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 24%;
-  --sidebar-primary: 186 100% 50%;
-  --sidebar-primary-foreground: 0 0% 0%;
-  --sidebar-accent: 0 0% 15%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-ring: 186 100% 50%;
-
-  --app-font-sans: 'Inter', sans-serif;
+  --app-font-sans: 'Inter Variable', 'Inter', -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --app-font-serif: Georgia, serif;
-  --app-font-mono: Menlo, monospace;
+  --app-font-mono: 'JetBrains Mono', Menlo, monospace;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
+  }
+  html {
+    scroll-behavior: smooth;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--app-font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    color: #0a0b0d;
+  }
+  ::selection {
+    background-color: #0052ff;
+    color: #ffffff;
+  }
+}
+
+@layer utilities {
+  /* Coinbase-style display headline: weight 400 + tight tracking */
+  .display-headline {
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+  .display-headline-tight {
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.0;
+  }
+  /* Pill CTA helpers */
+  .btn-pill {
+    border-radius: 9999px;
   }
 }

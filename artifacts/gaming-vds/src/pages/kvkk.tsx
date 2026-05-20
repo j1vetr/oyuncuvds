@@ -11,28 +11,28 @@ export default function Kvkk() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-primary selection:text-black">
-      <div className="border-b border-[#1a1a1a] px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-white text-[#0a0b0d] font-sans">
+      <div className="border-b border-[#eef0f3] px-6 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="Oyuncu VDS" className="h-8 w-auto" />
+          <img src="/logo.png" alt="Oyuncu VDS" className="h-10 w-auto" style={{ filter: "invert(1) hue-rotate(180deg)" }} />
         </a>
-        <a href="/" className="text-[#888] font-light text-xs uppercase tracking-[1.5px] hover:text-white transition-colors">
+        <a href="/" className="text-[#5b616e] font-medium text-[13px] hover:text-[#0052ff] transition-colors">
           Ana Sayfa
         </a>
       </div>
 
       <main className="container mx-auto px-4 py-14 max-w-2xl">
-        <h1 className="text-[22px] md:text-[30px] font-black uppercase tracking-tight text-white mb-2">
+        <h1 className="display-headline text-[28px] md:text-[40px] text-[#0a0b0d] mb-2">
           KVKK Aydınlatma Metni
         </h1>
-        <p className="text-[#555] text-xs mb-10">Son güncelleme: Mayıs 2026</p>
+        <p className="text-[#7c828a] text-[12px] mb-10">Son güncelleme: Mayıs 2026</p>
 
-        <div className="space-y-8 text-[#c0c0c0] font-light text-[13px] leading-[1.85]">
+        <div className="space-y-8 text-[#5b616e] text-[14px] leading-[1.85]">
 
           <section>
-            <h2 className="text-white font-bold text-[13px] uppercase tracking-[1px] mb-3">1. Veri Sorumlusu</h2>
+            <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">1. Veri Sorumlusu</h2>
             <p>
-              6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu sıfatıyla <strong className="text-white">{COMPANY}</strong> aşağıdaki bilgileri kamuoyuyla paylaşmaktadır.
+              6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında veri sorumlusu sıfatıyla <strong className="text-[#0a0b0d]">{COMPANY}</strong> aşağıdaki bilgileri kamuoyuyla paylaşmaktadır.
             </p>
             <p className="mt-2">
               Adres: {ADDRESS}<br />
@@ -42,7 +42,7 @@ export default function Kvkk() {
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-[13px] uppercase tracking-[1px] mb-3">2. İşlenen Kişisel Veriler</h2>
+            <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">2. İşlenen Kişisel Veriler</h2>
             <p>OyuncuVDS.com.tr üzerinden hizmet alan kullanıcılara ait aşağıdaki kişisel veriler işlenmektedir:</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>Ad ve soyad</li>
@@ -54,7 +54,7 @@ export default function Kvkk() {
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-[13px] uppercase tracking-[1px] mb-3">3. Kişisel Verilerin İşlenme Amaçları</h2>
+            <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">3. Kişisel Verilerin İşlenme Amaçları</h2>
             <ul className="list-disc pl-5 space-y-1">
               <li>VDS hizmetinin sunulması ve teslimatın gerçekleştirilmesi</li>
               <li>Ödeme işlemlerinin yürütülmesi (PayTR altyapısı)</li>
@@ -65,7 +65,7 @@ export default function Kvkk() {
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-[13px] uppercase tracking-[1px] mb-3">4. Kişisel Verilerin İşlenme Hukuki Sebebi</h2>
+            <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">4. Kişisel Verilerin İşlenme Hukuki Sebebi</h2>
             <p>Kişisel verileriniz; KVKK'nın 5. maddesi kapsamında;</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>Sözleşmenin kurulması ve ifası (KVKK m. 5/2-c)</li>
@@ -76,21 +76,21 @@ export default function Kvkk() {
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-[13px] uppercase tracking-[1px] mb-3">5. Verilerin Aktarıldığı Taraflar</h2>
+            <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">5. Verilerin Aktarıldığı Taraflar</h2>
             <p>
               Kişisel verileriniz; ödeme güvenliğinin sağlanması amacıyla PayTR Bilişim Hizmetleri A.Ş.'ye, yasal zorunluluk kapsamında ilgili kamu kurumlarına ve hizmetin ifasında görev alan teknik altyapı sağlayıcılarına aktarılabilir. Pazarlama veya reklam amaçlı üçüncü taraf paylaşımı yapılmamaktadır.
             </p>
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-[13px] uppercase tracking-[1px] mb-3">6. Kişisel Verilerin Saklanma Süresi</h2>
+            <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">6. Kişisel Verilerin Saklanma Süresi</h2>
             <p>
               Vergi mevzuatı gereği ödeme ve fatura kayıtları en az 5 yıl saklanmaktadır. Aktif hizmet süresince destek amaçlı iletişim kayıtları tutulmaktadır. Hizmet sona erdiğinde gereksiz veriler silinmekte veya anonimleştirilmektedir.
             </p>
           </section>
 
           <section>
-            <h2 className="text-white font-bold text-[13px] uppercase tracking-[1px] mb-3">7. KVKK Kapsamındaki Haklarınız</h2>
+            <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">7. KVKK Kapsamındaki Haklarınız</h2>
             <p>KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
@@ -104,7 +104,7 @@ export default function Kvkk() {
               <li>Kanuna aykırı işleme sebebiyle zarara uğramanız halinde zararın giderilmesini talep etme</li>
             </ul>
             <p className="mt-3">
-              Bu haklarınızı kullanmak için <a href={`mailto:${EMAIL}`} className="text-primary hover:underline">{EMAIL}</a> adresine yazılı olarak başvurabilirsiniz.
+              Bu haklarınızı kullanmak için <a href={`mailto:${EMAIL}`} className="text-[#0052ff] hover:underline">{EMAIL}</a> adresine yazılı olarak başvurabilirsiniz.
             </p>
           </section>
 

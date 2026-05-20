@@ -9,6 +9,15 @@ interface NavbarProps {
   onOpenOrder?: () => void;
 }
 
+const NAV_LINKS = [
+  { id: "hakkimizda", label: "Hakkımızda" },
+  { id: "ozellikler", label: "Özellikler" },
+  { id: "paketler", label: "Paketler" },
+  { id: "nasil-calisir", label: "Nasıl Çalışır?" },
+  { id: "sss", label: "SSS" },
+  { id: "iletisim", label: "İletişim" },
+];
+
 export function Navbar({ onOpenOrder }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,68 +30,88 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-black/90 backdrop-blur-md border-b border-[#3c3c3c]">
+    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#eef0f3]">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
-        {/* Logo */}
-        <div className="flex items-center shrink-0 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src="/logo.png" alt="Oyuncu VDS" className="h-14 w-auto" />
+        <div
+          className="flex items-center shrink-0 cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <img src="/logo.png" alt="Oyuncu VDS" className="h-12 w-auto" style={{ filter: "invert(1) hue-rotate(180deg)" }} />
         </div>
 
-        {/* Desktop Nav links */}
-        <div className="hidden lg:flex items-center gap-6">
-          <button onClick={() => scrollTo("hakkimizda")} className="text-[11px] font-bold uppercase tracking-[1px] text-[#d8d8d8] hover:text-primary transition-colors whitespace-nowrap">Hakkımızda</button>
-          <button onClick={() => scrollTo("ozellikler")} className="text-[11px] font-bold uppercase tracking-[1px] text-[#d8d8d8] hover:text-primary transition-colors whitespace-nowrap">Özellikler</button>
-          <button onClick={() => scrollTo("paketler")} className="text-[11px] font-bold uppercase tracking-[1px] text-[#d8d8d8] hover:text-primary transition-colors whitespace-nowrap">Paketler</button>
-          <button onClick={() => scrollTo("nasil-calisir")} className="text-[11px] font-bold uppercase tracking-[1px] text-[#d8d8d8] hover:text-primary transition-colors whitespace-nowrap">Nasıl Çalışır?</button>
-          <button onClick={() => scrollTo("sss")} className="text-[11px] font-bold uppercase tracking-[1px] text-[#d8d8d8] hover:text-primary transition-colors whitespace-nowrap">SSS</button>
-          <button onClick={() => scrollTo("iletisim")} className="text-[11px] font-bold uppercase tracking-[1px] text-[#d8d8d8] hover:text-primary transition-colors whitespace-nowrap">İletişim</button>
+        {/* Desktop nav */}
+        <div className="hidden lg:flex items-center gap-7">
+          {NAV_LINKS.map((l) => (
+            <button
+              key={l.id}
+              onClick={() => scrollTo(l.id)}
+              className="text-[14px] font-medium text-[#0a0b0d]/80 hover:text-[#0052ff] transition-colors whitespace-nowrap"
+            >
+              {l.label}
+            </button>
+          ))}
         </div>
 
-        {/* Desktop CTA buttons */}
-        <div className="hidden lg:flex items-center gap-3 shrink-0">
+        {/* Desktop CTAs */}
+        <div className="hidden lg:flex items-center gap-2.5 shrink-0">
           <a
             href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="h-10 px-5 font-bold uppercase tracking-[1px] text-[11px] bg-[#25D366] text-white hover:bg-[#20bd5a] transition-colors flex items-center gap-2"
+            className="h-10 px-5 font-semibold text-[13px] rounded-full bg-[#25D366] text-white hover:bg-[#1faf57] transition-colors flex items-center gap-2"
           >
             <WhatsAppIcon size={15} />
-            Whatsapp Destek
+            WhatsApp
           </a>
           <button
             onClick={() => onOpenOrder?.()}
-            className="h-10 px-5 font-bold uppercase tracking-[1px] text-[11px] bg-primary text-black hover:bg-primary/90 transition-colors"
+            className="h-10 px-6 font-semibold text-[13px] rounded-full bg-[#0052ff] text-white hover:bg-[#003ecc] transition-colors"
           >
             Sipariş Ver
           </button>
         </div>
 
-        {/* Mobile Nav Toggle */}
-        <button className="lg:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+        {/* Mobile toggle */}
+        <button
+          className="lg:hidden text-[#0a0b0d] p-1"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Menü"
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu */}
       {isOpen && (
-        <div className="lg:hidden absolute top-16 left-0 w-full bg-black border-b border-[#3c3c3c] p-4 flex flex-col gap-4">
-          <button onClick={() => scrollTo("hakkimizda")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">Hakkımızda</button>
-          <button onClick={() => scrollTo("ozellikler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">Özellikler</button>
-          <button onClick={() => scrollTo("paketler")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">Paketler</button>
-          <button onClick={() => scrollTo("nasil-calisir")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">Nasıl Çalışır?</button>
-          <button onClick={() => scrollTo("sss")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">SSS</button>
-          <button onClick={() => scrollTo("iletisim")} className="text-sm font-bold uppercase tracking-[1.5px] text-[#bbbbbb] text-left py-2">İletişim</button>
-          <hr className="border-[#3c3c3c]" />
+        <div className="lg:hidden absolute top-16 left-0 w-full bg-white border-b border-[#eef0f3] p-5 flex flex-col gap-1 shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+          {NAV_LINKS.map((l) => (
+            <button
+              key={l.id}
+              onClick={() => scrollTo(l.id)}
+              className="text-[15px] font-medium text-[#0a0b0d] text-left py-3 px-2 hover:bg-[#f7f7f7] rounded-lg transition-colors"
+            >
+              {l.label}
+            </button>
+          ))}
+          <div className="h-px bg-[#eef0f3] my-3" />
           <a
             href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm bg-[#25D366] text-white w-full flex items-center justify-center gap-2"
+            className="h-11 px-4 font-semibold text-[14px] rounded-full bg-[#25D366] text-white w-full flex items-center justify-center gap-2"
           >
             <WhatsAppIcon size={16} />
-            Whatsapp Destek
+            WhatsApp Destek
           </a>
-          <button onClick={() => { onOpenOrder?.(); setIsOpen(false); }} className="h-10 px-4 font-bold uppercase tracking-[1.5px] text-sm bg-primary text-black w-full">Sipariş Ver</button>
+          <button
+            onClick={() => {
+              onOpenOrder?.();
+              setIsOpen(false);
+            }}
+            className="h-11 px-4 mt-2 font-semibold text-[14px] rounded-full bg-[#0052ff] text-white w-full"
+          >
+            Sipariş Ver
+          </button>
         </div>
       )}
     </nav>

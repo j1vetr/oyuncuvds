@@ -35,61 +35,46 @@ const HIGHLIGHTS = [
 
 export function About() {
   return (
-    <section id="hakkimizda" className="w-full py-24 border-t border-[#0a1520]" style={{ background: "linear-gradient(160deg, #020d18 0%, #030303 60%)" }}>
+    <section id="hakkimizda" className="w-full bg-[#f7f7f7] py-20 md:py-24">
       <div className="container mx-auto px-4">
-
-        {/* Header */}
-        <div className="max-w-5xl mx-auto mb-16">
-          <div className="flex items-center gap-2 mb-5">
-            <span className="text-primary/50 text-[10px] font-bold select-none">|</span>
-            <span className="text-[11px] font-bold uppercase tracking-[3px] text-primary">Hizmetimiz</span>
-            <span className="text-primary/50 text-[10px] font-bold select-none">|</span>
-          </div>
+        <div className="max-w-5xl mx-auto mb-14">
+          <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] mb-4">
+            Hizmetimiz
+          </span>
           <div className="grid md:grid-cols-2 gap-8 items-end">
-            <h2 className="text-[32px] md:text-[46px] font-black uppercase tracking-tight text-white leading-[1.05]">
-              OYUNCU VDS<br />
-              <span className="text-primary">NE YAPAR?</span>
+            <h2 className="display-headline text-[36px] md:text-[56px] text-[#0a0b0d]">
+              Oyuncu VDS
+              <br />
+              <span className="text-[#0052ff]">ne yapar?</span>
             </h2>
-            <p className="text-[#888] font-light text-[15px] leading-[1.85] md:pb-1">
-              Kendi bilgisayarınızı açık bırakmadan, oyun hesabınızı uzaktaki güçlü bir Windows sistemi üzerinden kesintisiz çalıştırmanızı sağlarız.
+            <p className="text-[#5b616e] text-[16px] leading-[1.7] md:pb-2">
+              Kendi bilgisayarınızı açık bırakmadan, oyun hesabınızı uzaktaki güçlü
+              bir Windows sistemi üzerinden kesintisiz çalıştırmanızı sağlarız.
             </p>
           </div>
         </div>
 
-        {/* Feature grid */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
           {HIGHLIGHTS.map((item, idx) => {
             const Icon = item.icon;
-            const borderClasses = [
-              "border border-[#0d1e2e]",
-              "border border-[#0d1e2e] md:border-l-0",
-              "border border-[#0d1e2e] lg:border-l-0 md:border-t-0 lg:border-t",
-              "border border-[#0d1e2e] md:border-t-0",
-              "border border-[#0d1e2e] md:border-l-0 md:border-t-0",
-              "border border-[#0d1e2e] lg:border-l-0 md:border-t-0",
-            ];
             return (
               <div
                 key={idx}
-                className={`group p-8 hover:bg-white/[0.02] transition-colors ${borderClasses[idx]}`}
-                style={{ background: "rgba(2, 15, 30, 0.5)" }}
+                className="group bg-white rounded-3xl border border-[#dee1e6] p-7 hover:shadow-[0_4px_24px_rgba(0,0,0,0.05)] transition-shadow"
               >
-                <div className="w-10 h-10 border border-[#0d1e2e] group-hover:border-primary/30 flex items-center justify-center mb-5 transition-colors">
-                  <Icon size={18} className="text-primary/60 group-hover:text-primary transition-colors" strokeWidth={1.5} />
+                <div className="w-11 h-11 rounded-full bg-[#e6edff] group-hover:bg-[#0052ff]/15 flex items-center justify-center mb-5 transition-colors">
+                  <Icon size={18} className="text-[#0052ff]" strokeWidth={1.75} />
                 </div>
-                <h3 className="text-[13px] font-black uppercase tracking-[0.5px] text-white mb-3 leading-snug">
+                <h3 className="text-[17px] font-semibold tracking-tight text-[#0a0b0d] mb-2.5">
                   {item.title}
                 </h3>
-                <p className="text-[#666] font-light text-[12px] leading-[1.85]">
-                  {item.body}
-                </p>
+                <p className="text-[#5b616e] text-[13px] leading-[1.7]">{item.body}</p>
               </div>
             );
           })}
         </div>
 
-        {/* Bottom stat strip */}
-        <div className="max-w-5xl mx-auto grid grid-cols-3 border border-[#0d1e2e] border-t-0 mt-0">
+        <div className="max-w-6xl mx-auto grid grid-cols-3 bg-white rounded-3xl border border-[#dee1e6] overflow-hidden">
           {[
             { value: "7/24", label: "Kesintisiz Hizmet" },
             { value: "30-60 dk", label: "Ortalama Teslimat" },
@@ -97,15 +82,17 @@ export function About() {
           ].map((stat, i) => (
             <div
               key={i}
-              className={`py-5 px-6 text-center ${i > 0 ? "border-l border-[#0d1e2e]" : ""}`}
-              style={{ background: "rgba(2, 15, 30, 0.6)" }}
+              className={`py-7 px-6 text-center ${i > 0 ? "border-l border-[#eef0f3]" : ""}`}
             >
-              <p className="text-primary font-black text-[20px] tracking-tight mb-0.5">{stat.value}</p>
-              <p className="text-[#555] font-light text-[11px] uppercase tracking-[1px]">{stat.label}</p>
+              <p className="text-[#0052ff] font-medium text-[24px] tracking-tight mb-1">
+                {stat.value}
+              </p>
+              <p className="text-[#7c828a] text-[12px] uppercase tracking-[0.1em] font-semibold">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
