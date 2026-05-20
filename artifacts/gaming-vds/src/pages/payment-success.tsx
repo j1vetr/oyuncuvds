@@ -49,7 +49,7 @@ export default function PaymentSuccess() {
           </h1>
           <p className="text-[#5b616e] text-[15px] leading-[1.7] max-w-lg mx-auto">
             Siparişiniz bize ulaştı. Kurulum sırasına göre VDS erişim bilgileriniz
-            maksimum <span className="text-[#0a0b0d] font-semibold">30–60 dakika</span> içerisinde{" "}
+            maksimum <span className="text-[#0a0b0d] font-semibold">30-60 dakika</span> içerisinde{" "}
             <span className="text-[#0a0b0d] font-semibold">WhatsApp</span> üzerinden tarafınıza iletilecektir.
           </p>
         </div>

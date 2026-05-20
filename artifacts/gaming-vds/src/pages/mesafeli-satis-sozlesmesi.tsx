@@ -62,7 +62,7 @@ export default function MesafeliSatisSozlesmesi() {
           <section>
             <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">4. Teslimat</h2>
             <p>
-              Ödeme onayının ardından VDS erişim bilgileri (IP adresi, kullanıcı adı, şifre), sipariş formunda belirtilen WhatsApp numarasına kurulum sırasına göre en fazla 30–60 dakika içinde iletilir. Yoğunluk durumunda bu süre uzayabilir; bu durum önceden WhatsApp üzerinden bildirilir.
+              Ödeme onayının ardından VDS erişim bilgileri (IP adresi, kullanıcı adı, şifre), sipariş formunda belirtilen WhatsApp numarasına kurulum sırasına göre en fazla 30-60 dakika içinde iletilir. Yoğunluk durumunda bu süre uzayabilir; bu durum önceden WhatsApp üzerinden bildirilir.
             </p>
           </section>
 

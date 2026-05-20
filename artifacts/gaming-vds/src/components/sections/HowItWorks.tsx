@@ -38,8 +38,8 @@ const steps = [
     image: iconStep4,
     title: "VDS'ini Teslim Al",
     description:
-      "Ödeme sonrası VDS erişim bilgilerin (IP, şifre) WhatsApp üzerinden 30–60 dakika içinde iletilir.",
-    detail: "30–60 dk içinde teslim",
+      "Ödeme sonrası VDS erişim bilgilerin (IP, şifre) WhatsApp üzerinden 30-60 dakika içinde iletilir.",
+    detail: "30-60 dk içinde teslim",
     DetailIcon: Send,
   },
 ];
@@ -79,7 +79,7 @@ export function HowItWorks() {
             Nasıl çalışır?
           </h2>
           <p className="text-[#5b616e] text-[16px] leading-[1.65]">
-            Sipariş ver, ödemeyi tamamla — 30–60 dakikada
+            Sipariş ver, ödemeyi tamamla, 30-60 dakikada
             <br className="hidden md:block" />
             VDS erişim bilgilerin WhatsApp'ta.
           </p>

@@ -63,7 +63,7 @@ const STATS: StatItem[] = [
     render: () => iconWrap("#0078D4", <WindowsLogo size={20} />),
   },
   {
-    title: "30–60 dk Teslimat",
+    title: "30-60 dk Teslimat",
     desc: "Siparişinizin ardından hızlıca teslim edilir.",
     render: () => iconWrap("#0052ff", <Clock size={20} className="text-[#0052ff]" />),
   },

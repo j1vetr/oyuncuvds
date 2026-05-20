@@ -16,7 +16,7 @@ const Footer = lazy(() => import("@/components/sections/Footer").then((m) => ({ 
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Oyuncu VDS | 7/24 Gaming VDS – Knight Online, Metin2, Silkroad";
+    document.title = "Oyuncu VDS | 7/24 Gaming VDS - Knight Online, Metin2, Silkroad";
   }, []);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalPackageId, setModalPackageId] = useState<PackageId>("baslangic");

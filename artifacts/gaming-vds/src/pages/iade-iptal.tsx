@@ -68,7 +68,7 @@ export default function IadeIptal() {
           <section>
             <h2 className="text-[#0a0b0d] font-semibold text-[16px] tracking-tight mb-3">5. İade Süreci</h2>
             <p>
-              İade onaylanan durumlarda tutar, ödemenin yapıldığı karta 5–10 iş günü içinde iade edilir. İade süreci bankanıza göre değişiklik gösterebilir.
+              İade onaylanan durumlarda tutar, ödemenin yapıldığı karta 5-10 iş günü içinde iade edilir. İade süreci bankanıza göre değişiklik gösterebilir.
             </p>
           </section>
 
