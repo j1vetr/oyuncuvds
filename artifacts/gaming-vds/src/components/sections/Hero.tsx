@@ -118,28 +118,9 @@ export function Hero({ onOpenOrder }: HeroProps) {
             <h1 className="display-headline text-[42px] sm:text-[54px] lg:text-[58px] xl:text-[68px] text-[#0a0b0d] leading-[1.04] tracking-[-0.02em] mb-7">
               Bilgisayarın
               <br />
-              kapalıyken{" "}
-              <span className="relative inline-block text-[#0052ff]">
-                oyun hesabın
-                <svg
-                  className="absolute left-0 -bottom-2 w-full"
-                  height="10"
-                  viewBox="0 0 200 10"
-                  preserveAspectRatio="none"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M2 7 Q 50 1, 100 6 T 198 5"
-                    stroke="#0052ff"
-                    strokeOpacity="0.35"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    fill="none"
-                  />
-                </svg>
-              </span>
+              kapalıyken
+              <br />
+              <span className="text-[#0052ff]">oyun hesabın</span>
               <br />
               açık kalsın.
             </h1>
@@ -219,7 +200,7 @@ export function Hero({ onOpenOrder }: HeroProps) {
 
         {/* Premium bottom stat strip with vertical dividers */}
         <div className="mt-20 md:mt-28 rounded-3xl border border-[#dee1e6] bg-white shadow-[0_8px_28px_rgba(15,23,42,0.04)] overflow-hidden">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
             {STATS.map(({ render, title, desc }, idx) => (
               <div
                 key={title}
