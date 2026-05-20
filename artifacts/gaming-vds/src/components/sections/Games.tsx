@@ -20,6 +20,7 @@ const games = [
     tags: ["Pazar", "Farm", "EXP Party"],
     accent: "#e0492f",
     accentSoft: "rgba(224, 73, 47, 0.20)",
+    logoClass: "h-10 md:h-11",
   },
   {
     id: "silkroad",
@@ -92,7 +93,7 @@ export function Games() {
                       alt={`${game.name} logo`}
                       loading="lazy"
                       decoding="async"
-                      className="h-14 md:h-16 w-auto object-contain"
+                      className={`${(game as { logoClass?: string }).logoClass ?? "h-14 md:h-16"} w-auto object-contain`}
                       style={{ filter: "drop-shadow(0 3px 10px rgba(0,0,0,0.95))" }}
                     />
                   </div>
