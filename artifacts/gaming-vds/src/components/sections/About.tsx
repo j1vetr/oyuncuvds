@@ -1,14 +1,4 @@
-import {
-  Server,
-  Wifi,
-  Shield,
-  Clock,
-  Zap,
-  Headphones,
-  Lock,
-  Gauge,
-  CreditCard,
-} from "lucide-react";
+import { Server, Wifi, Shield, Clock, Zap, Headphones } from "lucide-react";
 import heroImage from "@assets/9e6a6532-7b5e-42f5-b60d-a1cda41e9985_1779239866848.png";
 import paytrLogo from "@assets/PayTR-Logo_1779239906252.png";
 
@@ -82,98 +72,32 @@ export function About() {
       />
 
       <div className="container mx-auto px-4">
-        {/* Top hero split */}
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center mb-16 md:mb-20">
-          {/* LEFT */}
-          <div>
-            <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] bg-[#e6edff] rounded-full px-3 py-1 mb-5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#0052ff]" />
-              Hizmetimiz
-            </span>
-            <h2 className="display-headline text-[40px] md:text-[56px] text-[#0a0b0d] mb-5 tracking-[-0.02em] leading-[1.05]">
-              Oyuncu VDS
-              <br />
-              <span className="text-[#0052ff]">ne yapar?</span>
-            </h2>
-            <p className="text-[#5b616e] text-[16px] leading-[1.7] max-w-md">
-              Kendi bilgisayarınızı açık bırakmadan, oyun hesabınızı uzaktaki
-              güçlü bir Windows sistemi üzerinden kesintisiz çalıştırmanızı
-              sağlar. Oyunlarınızı, botlarınızı ve görevlerinizi her zaman
-              çevrimiçi tutun.
-            </p>
-          </div>
+        {/* Top: centered header + big image */}
+        <div className="text-center max-w-3xl mx-auto mb-4">
+          <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] bg-[#e6edff] rounded-full px-3 py-1 mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#0052ff]" />
+            Hizmetimiz
+          </span>
+          <h2 className="display-headline text-[40px] md:text-[56px] text-[#0a0b0d] mb-5 tracking-[-0.02em] leading-[1.05]">
+            Oyuncu VDS <span className="text-[#0052ff]">ne yapar?</span>
+          </h2>
+          <p className="text-[#5b616e] text-[16px] leading-[1.7] max-w-xl mx-auto">
+            Kendi bilgisayarınızı açık bırakmadan, oyun hesabınızı uzaktaki
+            güçlü bir Windows sistemi üzerinden kesintisiz çalıştırmanızı
+            sağlar. Oyunlarınızı, botlarınızı ve görevlerinizi her zaman
+            çevrimiçi tutun.
+          </p>
+        </div>
 
-          {/* RIGHT - composite image + floating cards */}
-          <div className="relative">
-            <img
-              src={heroImage}
-              alt="Oyuncu VDS uzak masaüstü ile bağlanın"
-              loading="lazy"
-              decoding="async"
-              className="w-full h-auto relative z-10 drop-shadow-[0_30px_50px_rgba(15,23,42,0.18)]"
-            />
-
-            {/* Floating cards (desktop only) */}
-            <div className="hidden lg:flex absolute -top-2 -right-2 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_rgba(15,23,42,0.08)] px-3.5 py-2.5">
-              <span className="w-9 h-9 rounded-xl bg-[#e6f1ff] flex items-center justify-center shrink-0">
-                <WindowsLogo size={18} />
-              </span>
-              <div>
-                <p className="text-[12.5px] font-bold text-[#0a0b0d] leading-tight">
-                  Windows 10
-                </p>
-                <p className="text-[11px] text-[#7c828a] leading-tight">
-                  Hazır sistem
-                </p>
-              </div>
-            </div>
-
-            <div className="hidden lg:flex absolute top-[28%] -right-4 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_rgba(15,23,42,0.08)] px-3.5 py-2.5">
-              <span className="w-9 h-9 rounded-xl bg-[#e6edff] flex items-center justify-center shrink-0">
-                <Lock size={16} className="text-[#0052ff]" />
-              </span>
-              <div>
-                <p className="text-[12.5px] font-bold text-[#0a0b0d] leading-tight">
-                  Güvenli Erişim
-                </p>
-                <p className="text-[11px] text-[#7c828a] leading-tight">
-                  IP ve şifre korumalı
-                </p>
-              </div>
-            </div>
-
-            <div className="hidden lg:flex absolute top-[55%] -right-2 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_rgba(15,23,42,0.08)] px-3.5 py-2.5">
-              <span className="w-9 h-9 rounded-xl bg-[#e6edff] flex items-center justify-center shrink-0">
-                <Gauge size={16} className="text-[#0052ff]" />
-              </span>
-              <div>
-                <p className="text-[12.5px] font-bold text-[#0a0b0d] leading-tight">
-                  Düşük Gecikme
-                </p>
-                <p className="text-[11px] text-[#7c828a] leading-tight">
-                  Yüksek performans
-                </p>
-              </div>
-            </div>
-
-            <div className="hidden lg:flex absolute -bottom-2 -right-2 z-20 items-center gap-3 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_10px_30px_rgba(15,23,42,0.08)] px-3.5 py-2.5">
-              <span className="w-12 h-9 rounded-xl bg-white border border-[#eef0f3] flex items-center justify-center shrink-0 px-1.5">
-                <img
-                  src={paytrLogo}
-                  alt="PayTR"
-                  className="h-3.5 w-auto object-contain"
-                />
-              </span>
-              <div>
-                <p className="text-[12.5px] font-bold text-[#0a0b0d] leading-tight">
-                  Güvenli Ödeme
-                </p>
-                <p className="text-[11px] text-[#7c828a] leading-tight">
-                  PayTR ile güvenli
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Big hero image */}
+        <div className="max-w-5xl mx-auto -mt-2 mb-12 md:mb-16">
+          <img
+            src={heroImage}
+            alt="Oyuncu VDS uzak masaüstü ile bağlanın"
+            loading="lazy"
+            decoding="async"
+            className="w-full h-auto drop-shadow-[0_30px_50px_rgba(15,23,42,0.18)]"
+          />
         </div>
 
         {/* Feature cards grid - 6 cards */}
