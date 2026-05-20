@@ -72,32 +72,34 @@ export function About() {
       />
 
       <div className="container mx-auto px-4">
-        {/* Top: centered header + big image */}
-        <div className="text-center max-w-3xl mx-auto mb-4">
-          <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] bg-[#e6edff] rounded-full px-3 py-1 mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0052ff]" />
-            Hizmetimiz
-          </span>
-          <h2 className="display-headline text-[40px] md:text-[56px] text-[#0a0b0d] mb-5 tracking-[-0.02em] leading-[1.05]">
-            Oyuncu VDS <span className="text-[#0052ff]">ne yapar?</span>
-          </h2>
-          <p className="text-[#5b616e] text-[16px] leading-[1.7] max-w-xl mx-auto">
-            Kendi bilgisayarınızı açık bırakmadan, oyun hesabınızı uzaktaki
-            güçlü bir Windows sistemi üzerinden kesintisiz çalıştırmanızı
-            sağlar. Oyunlarınızı, botlarınızı ve görevlerinizi her zaman
-            çevrimiçi tutun.
-          </p>
-        </div>
-
-        {/* Big hero image */}
-        <div className="max-w-5xl mx-auto -mt-2 mb-12 md:mb-16">
-          <img
-            src={heroImage}
-            alt="Oyuncu VDS uzak masaüstü ile bağlanın"
-            loading="lazy"
-            decoding="async"
-            className="w-full h-auto drop-shadow-[0_30px_50px_rgba(15,23,42,0.18)]"
-          />
+        {/* Top: split header + image */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-center mb-12 md:mb-16">
+          <div>
+            <span className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] bg-[#e6edff] rounded-full px-3 py-1 mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#0052ff]" />
+              Hizmetimiz
+            </span>
+            <h2 className="display-headline text-[40px] md:text-[56px] text-[#0a0b0d] mb-5 tracking-[-0.02em] leading-[1.05]">
+              Oyuncu VDS
+              <br />
+              <span className="text-[#0052ff]">ne yapar?</span>
+            </h2>
+            <p className="text-[#5b616e] text-[16px] leading-[1.7] max-w-md">
+              Kendi bilgisayarınızı açık bırakmadan, oyun hesabınızı uzaktaki
+              güçlü bir Windows sistemi üzerinden kesintisiz çalıştırmanızı
+              sağlar. Oyunlarınızı, botlarınızı ve görevlerinizi her zaman
+              çevrimiçi tutun.
+            </p>
+          </div>
+          <div className="lg:-mr-8 xl:-mr-16">
+            <img
+              src={heroImage}
+              alt="Oyuncu VDS uzak masaüstü ile bağlanın"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto drop-shadow-[0_30px_50px_rgba(15,23,42,0.18)]"
+            />
+          </div>
         </div>
 
         {/* Feature cards grid - 6 cards */}
