@@ -37,11 +37,11 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
           <div className="flex items-center gap-5">
             <span className="inline-flex items-center gap-1.5">
               <FileCheck size={13} className="text-[#4d8bff]" />
-              <span className="text-white/90">Tüm satışlar resmi faturalıdır</span>
+              <span className="text-white/90 tracking-wide font-semibold">TÜM SATIŞLAR RESMİ FATURALIDIR</span>
             </span>
             <span className="hidden lg:inline-flex items-center gap-1.5 text-white/70">
               <MapPin size={13} />
-              İstanbul, Türkiye
+              Sarıyer Merkez Mah. Sarıyer / İstanbul
             </span>
           </div>
           <div className="flex items-center gap-5">
@@ -66,12 +66,12 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
       </div>
 
       <nav className="w-full bg-white/90 backdrop-blur-md border-b border-[#eef0f3]">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      <div className="container mx-auto px-4 h-20 md:h-24 flex items-center justify-between gap-4">
         <div
           className="flex items-center shrink-0 cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-16 md:h-20 w-auto" />
+          <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-20 md:h-28 w-auto" />
         </div>
 
         {/* Desktop nav */}
@@ -123,7 +123,7 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="lg:hidden absolute top-16 left-0 w-full bg-white border-b border-[#eef0f3] p-5 flex flex-col gap-1 shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
+        <div className="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-[#eef0f3] p-5 flex flex-col gap-1 shadow-[0_4px_12px_rgba(0,0,0,0.04)]">
           {NAV_LINKS.map((l) => (
             <button
               key={l.id}
