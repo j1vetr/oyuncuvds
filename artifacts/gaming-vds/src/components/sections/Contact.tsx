@@ -66,7 +66,7 @@ export function Contact() {
             İletişim
           </span>
           <h2 className="display-headline text-[44px] md:text-[60px] text-[#0a0b0d] mb-5 tracking-[-0.02em] leading-[1.05]">
-            Bize ulaşın
+            Bize Ulaşın
           </h2>
           <p className="text-[#5b616e] text-[15px] md:text-[16px] leading-[1.7]">
             Sipariş öncesi veya sonrası her türlü sorunuz için 7/24

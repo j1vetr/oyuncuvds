@@ -65,7 +65,7 @@ export function FAQ() {
             SSS
           </span>
           <h2 className="display-headline text-[36px] md:text-[52px] text-[#0a0b0d] mb-4 tracking-[-0.02em]">
-            Sık sorulan sorular
+            Sık Sorulan Sorular
           </h2>
           <p className="text-[#5b616e] text-[15px] leading-[1.65]">
             Aradığınız cevap burada. Konuya göre filtreleyin veya arama yapın.

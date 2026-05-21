@@ -68,7 +68,7 @@ export function HowItWorks() {
             Süreç
           </span>
           <h2 className="display-headline text-[40px] md:text-[56px] text-[#0a0b0d] mb-4 tracking-[-0.02em]">
-            Nasıl çalışır?
+            Nasıl Çalışır?
           </h2>
           <p className="text-[#5b616e] text-[16px] leading-[1.65]">
             Sipariş ver, ödemeyi tamamla, 30-60 dakikada

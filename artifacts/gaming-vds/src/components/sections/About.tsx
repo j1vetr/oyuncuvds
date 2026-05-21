@@ -82,7 +82,7 @@ export function About() {
             <h2 className="display-headline text-[40px] md:text-[56px] text-[#0a0b0d] mb-5 tracking-[-0.02em] leading-[1.05]">
               Oyuncu VDS
               <br />
-              <span className="text-[#0052ff]">ne yapar?</span>
+              <span className="text-[#0052ff]">Ne Yapar?</span>
             </h2>
             <p className="text-[#5b616e] text-[16px] leading-[1.7] max-w-md">
               Kendi bilgisayarınızı açık bırakmadan, oyun hesabınızı uzaktaki
