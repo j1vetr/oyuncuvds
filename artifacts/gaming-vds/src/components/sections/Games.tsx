@@ -124,20 +124,20 @@ export function Games() {
           {/* HERO card — Knight Online */}
           <GameCard
             game={games[0]}
-            className="lg:col-span-7 lg:row-span-2 lg:min-h-[420px]"
+            className="min-h-[280px] sm:min-h-[340px] lg:col-span-7 lg:row-span-2 lg:min-h-[420px]"
             featured
           />
 
           {/* Metin2 */}
           <GameCard
             game={games[1]}
-            className="lg:col-span-5 lg:min-h-[202px]"
+            className="min-h-[200px] sm:min-h-[220px] lg:col-span-5 lg:min-h-[202px]"
           />
 
           {/* Silkroad */}
           <GameCard
             game={games[2]}
-            className="lg:col-span-5 lg:min-h-[202px]"
+            className="min-h-[200px] sm:min-h-[220px] lg:col-span-5 lg:min-h-[202px]"
           />
         </div>
 
