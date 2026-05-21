@@ -81,13 +81,13 @@ export function Games() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header — editorial */}
-        <div className="max-w-3xl mx-auto text-center mb-7 md:mb-9">
-          <h2 className="display-headline text-[32px] sm:text-[40px] lg:text-[48px] text-white tracking-[-0.03em] leading-[1]">
-            Üç efsane.{" "}
-            <span className="italic font-light text-white/70">tek</span>{" "}
-            <span className="text-[#4d8bff]">altyapı.</span>
+        <div className="max-w-5xl mx-auto text-center mb-7 md:mb-9">
+          <h2 className="display-headline text-white tracking-[-0.04em] leading-[0.92] text-[52px] sm:text-[76px] lg:text-[104px]">
+            Hesabın{" "}
+            <span className="italic font-light text-white/65">hiç</span>{" "}
+            <span className="text-[#4d8bff]">uyumaz.</span>
           </h2>
-          <p className="text-white/55 text-[14px] md:text-[15px] leading-[1.6] mt-3 max-w-xl mx-auto">
+          <p className="text-white/55 text-[14px] md:text-[15px] leading-[1.6] mt-4 max-w-xl mx-auto">
             En sevilen MMORPG'ler için optimize edilmiş, kesintisiz 7/24
             çalışan Windows VDS altyapısı.
           </p>
