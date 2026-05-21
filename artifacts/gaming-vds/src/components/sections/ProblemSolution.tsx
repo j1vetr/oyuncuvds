@@ -256,17 +256,6 @@ export function ProblemSolution() {
             </span>
             Oyuncu VDS ile oyununa hiç durmasın, kazancın kesintisiz artsın!
           </p>
-          <a
-            href="#paketler"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("paketler")?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="inline-flex items-center justify-center h-11 px-6 rounded-full bg-[#0052ff] text-white text-[13px] font-semibold hover:bg-[#003ecc] transition-colors shadow-[0_6px_20px_-6px_rgba(0,82,255,0.4)]"
-            data-testid="button-problem-packages"
-          >
-            Paketleri İncele
-          </a>
         </div>
       </div>
     </section>
