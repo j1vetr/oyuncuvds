@@ -14,7 +14,7 @@ export default function OnBilgilendirme() {
     <div className="min-h-screen bg-white text-[#0a0b0d] font-sans">
       <div className="border-b border-[#eef0f3] px-6 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3">
-          <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-14 md:h-16 w-auto" />
+          <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-14 md:h-16 w-auto" loading="eager" decoding="async" />
         </a>
         <a href="/" className="text-[#5b616e] font-medium text-[13px] hover:text-[#0052ff] transition-colors">
           Ana Sayfa

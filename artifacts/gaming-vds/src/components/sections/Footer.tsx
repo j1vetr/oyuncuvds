@@ -21,7 +21,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <a href="/" className="inline-block mb-4">
-              <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-14 md:h-16 w-auto" style={{ filter: "invert(1) hue-rotate(180deg) brightness(1.2)" }} />
+              <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-14 md:h-16 w-auto" loading="lazy" decoding="async" style={{ filter: "invert(1) hue-rotate(180deg) brightness(1.2)" }} />
             </a>
             <p className="text-[#a8acb3] text-[14px] leading-relaxed mb-4">
               Knight Online, Metin2 ve Silkroad için 7/24 kesintisiz oyun VDS hizmeti.

@@ -192,6 +192,7 @@ export function ProblemSolution() {
               className="w-full max-w-[320px] lg:max-w-[360px] h-auto object-contain"
               style={{ filter: "drop-shadow(0 24px 36px rgba(0,82,255,0.18))" }}
               loading="lazy"
+              decoding="async"
             />
 
             <div className="mt-6 text-center">

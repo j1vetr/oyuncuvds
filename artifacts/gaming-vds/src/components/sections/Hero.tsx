@@ -165,6 +165,9 @@ export function Hero({ onOpenOrder }: HeroProps) {
               className="relative z-10 w-full h-auto object-contain mx-auto max-w-[820px] lg:max-w-none lg:scale-110 xl:scale-115 origin-center"
               loading="eager"
               fetchPriority="high"
+              decoding="async"
+              width={1600}
+              height={1100}
             />
           </div>
         </div>

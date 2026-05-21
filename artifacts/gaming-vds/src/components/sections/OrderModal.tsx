@@ -390,6 +390,8 @@ export function OrderModal({
                     src="/logo-v2.png"
                     alt="Oyuncu VDS"
                     className="h-16 md:h-20 w-auto"
+                    loading="eager"
+                    decoding="async"
                   />
                 </div>
 

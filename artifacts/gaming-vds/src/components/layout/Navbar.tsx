@@ -71,7 +71,7 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
           className="flex items-center shrink-0 cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-20 md:h-28 w-auto" />
+          <img src="/logo-v2.png" alt="Oyuncu VDS" className="h-20 md:h-28 w-auto" loading="eager" decoding="async" />
         </div>
 
         {/* Desktop nav */}

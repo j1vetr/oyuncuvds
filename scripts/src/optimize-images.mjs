@@ -6,11 +6,10 @@ const ROOT = path.resolve(process.cwd());
 
 const targets = [
   // public/ — served as-is
-  { file: "artifacts/gaming-vds/public/hero-devices.png", maxW: 1600, type: "png" },
+  { file: "artifacts/gaming-vds/public/hero-composition.png", maxW: 1600, type: "png" },
   { file: "artifacts/gaming-vds/public/server-tower.png", maxW: 1200, type: "png" },
-  { file: "artifacts/gaming-vds/public/hero-bg.jpg", maxW: 1920, type: "jpg", quality: 78 },
   { file: "artifacts/gaming-vds/public/opengraph.jpg", maxW: 1200, type: "jpg", quality: 82 },
-  { file: "artifacts/gaming-vds/public/logo.png", maxW: 600, type: "png" },
+  { file: "artifacts/gaming-vds/public/logo-v2.png", maxW: 600, type: "png" },
   { file: "artifacts/gaming-vds/public/logo-knight.png", maxW: 360, type: "png" },
   { file: "artifacts/gaming-vds/public/logo-metin2.png", maxW: 360, type: "png" },
   { file: "artifacts/gaming-vds/public/logo-silkroad.png", maxW: 360, type: "png" },
