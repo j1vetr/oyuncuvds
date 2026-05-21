@@ -57,7 +57,7 @@ export function Games() {
   return (
     <section
       id="desteklenen-oyunlar"
-      className="relative w-full bg-[#0a0b0d] py-20 md:py-28 overflow-hidden border-t border-b border-[#1a1c20]"
+      className="relative w-full bg-[#0a0b0d] py-12 md:py-16 overflow-hidden border-t border-b border-[#1a1c20]"
     >
       {/* Dot pattern */}
       <div
@@ -81,25 +81,20 @@ export function Games() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header — editorial */}
-        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-3 text-[11px] font-semibold tracking-[0.25em] text-white/50 uppercase mb-6">
-            <span className="text-[#4d8bff]">[</span>
-            <span>01 — Uyumlu Platformlar</span>
-            <span className="text-[#4d8bff]">]</span>
-          </div>
-          <h2 className="display-headline text-[44px] sm:text-[64px] lg:text-[80px] text-white tracking-[-0.03em] leading-[0.98]">
+        <div className="max-w-3xl mx-auto text-center mb-7 md:mb-9">
+          <h2 className="display-headline text-[32px] sm:text-[40px] lg:text-[48px] text-white tracking-[-0.03em] leading-[1]">
             Üç efsane.{" "}
             <span className="italic font-light text-white/70">tek</span>{" "}
             <span className="text-[#4d8bff]">altyapı.</span>
           </h2>
-          <p className="text-white/55 text-[15px] md:text-[16.5px] leading-[1.7] mt-6 max-w-xl mx-auto">
+          <p className="text-white/55 text-[14px] md:text-[15px] leading-[1.6] mt-3 max-w-xl mx-auto">
             En sevilen MMORPG'ler için optimize edilmiş, kesintisiz 7/24
             çalışan Windows VDS altyapısı.
           </p>
         </div>
 
         {/* Marquee strip */}
-        <div className="relative -mx-4 mb-12 md:mb-16 py-4 border-y border-white/[0.08] overflow-hidden">
+        <div className="relative -mx-4 mb-7 md:mb-9 py-2.5 border-y border-white/[0.08] overflow-hidden">
           <div
             className="absolute inset-0 pointer-events-none z-10"
             style={{
@@ -107,15 +102,15 @@ export function Games() {
                 "linear-gradient(to right, #0a0b0d 0%, transparent 8%, transparent 92%, #0a0b0d 100%)",
             }}
           />
-          <div className="flex gap-10 animate-[marquee_38s_linear_infinite] whitespace-nowrap">
+          <div className="flex gap-8 animate-[marquee_38s_linear_infinite] whitespace-nowrap">
             {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map(
               (t, i) => (
                 <span
                   key={`${t}-${i}`}
-                  className="text-[13px] font-semibold tracking-[0.18em] uppercase text-white/35 flex items-center gap-10"
+                  className="text-[11.5px] font-semibold tracking-[0.18em] uppercase text-white/35 flex items-center gap-8"
                 >
                   {t}
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#4d8bff]/60" />
+                  <span className="w-1 h-1 rounded-full bg-[#4d8bff]/60" />
                 </span>
               ),
             )}
@@ -123,29 +118,29 @@ export function Games() {
         </div>
 
         {/* BENTO grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 max-w-6xl mx-auto">
           {/* HERO card — Knight Online */}
           <GameCard
             game={games[0]}
-            className="lg:col-span-7 lg:row-span-2 lg:min-h-[640px]"
+            className="lg:col-span-7 lg:row-span-2 lg:min-h-[420px]"
             featured
           />
 
           {/* Metin2 */}
           <GameCard
             game={games[1]}
-            className="lg:col-span-5 lg:min-h-[310px]"
+            className="lg:col-span-5 lg:min-h-[202px]"
           />
 
           {/* Silkroad */}
           <GameCard
             game={games[2]}
-            className="lg:col-span-5 lg:min-h-[310px]"
+            className="lg:col-span-5 lg:min-h-[202px]"
           />
         </div>
 
         {/* Bottom stat / trust row */}
-        <div className="mt-14 md:mt-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-px bg-white/[0.08] border border-white/[0.08] rounded-3xl overflow-hidden">
+        <div className="mt-7 md:mt-9 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-px bg-white/[0.08] border border-white/[0.08] rounded-2xl overflow-hidden">
           {[
             {
               k: "03",
@@ -173,32 +168,29 @@ export function Games() {
           ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#0d0e10] p-6 md:p-7 flex flex-col gap-2"
+              className="bg-[#0d0e10] px-4 py-4 md:px-5 md:py-4 flex items-center gap-3"
             >
               {item.icon ? (
-                <span className="w-10 h-10 rounded-full bg-[#0052ff]/15 border border-[#0052ff]/25 flex items-center justify-center mb-1">
+                <span className="w-9 h-9 shrink-0 rounded-full bg-[#0052ff]/15 border border-[#0052ff]/25 flex items-center justify-center">
                   {item.icon}
                 </span>
               ) : (
-                <span className="display-headline text-[44px] md:text-[52px] text-white leading-none tracking-[-0.03em]">
+                <span className="display-headline text-[28px] md:text-[32px] text-white leading-none tracking-[-0.03em] shrink-0">
                   {item.k}
                 </span>
               )}
-              <p
-                className={`font-bold text-white leading-tight ${
-                  item.icon ? "text-[16px]" : "text-[13px] uppercase tracking-wider text-white/70"
-                }`}
-              >
-                {item.icon ? item.k : item.v}
-              </p>
-              <p className="text-[12.5px] text-white/55 leading-snug">
-                {item.icon ? item.v : item.sub}
-              </p>
-              {item.icon && (
-                <p className="text-[11px] text-white/40 mt-auto pt-1">
-                  {item.sub}
+              <div className="min-w-0">
+                <p
+                  className={`font-bold text-white leading-tight ${
+                    item.icon ? "text-[13px]" : "text-[12px] uppercase tracking-wider text-white/80"
+                  }`}
+                >
+                  {item.icon ? item.k : item.v}
                 </p>
-              )}
+                <p className="text-[11px] text-white/50 leading-snug mt-0.5">
+                  {item.icon ? item.v : item.sub}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -257,63 +249,50 @@ function GameCard({
       />
 
       {/* Top corner: big number */}
-      <div className="absolute top-5 right-5 z-10 text-right">
+      <div className="absolute top-3.5 right-4 z-10 text-right">
         <span
           className="display-headline block text-white/95 leading-none tracking-[-0.04em]"
           style={{
-            fontSize: featured ? "clamp(80px, 12vw, 140px)" : "60px",
+            fontSize: featured ? "clamp(56px, 8vw, 92px)" : "42px",
             textShadow: "0 4px 24px rgba(0,0,0,0.6)",
           }}
         >
           {game.num}
         </span>
-        <span className="inline-block mt-2 text-[10px] font-bold tracking-[0.3em] text-white/60 uppercase">
+        <span className="inline-block mt-1 text-[9px] font-bold tracking-[0.3em] text-white/60 uppercase">
           {game.short}
         </span>
       </div>
 
-      {/* Top-left: live status pill */}
-      <div className="absolute top-5 left-5 z-10 flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/15 rounded-full pl-2 pr-3 py-1.5">
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full rounded-full bg-[#16a34a] opacity-70 animate-ping" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-[#16a34a]" />
-        </span>
-        <span className="text-[10px] font-bold tracking-[0.18em] uppercase text-white/90">
-          Tam Uyum
-        </span>
-      </div>
-
       {/* Bottom content */}
-      <div className="absolute bottom-0 inset-x-0 z-10 p-6 md:p-7">
+      <div className={`absolute bottom-0 inset-x-0 z-10 ${featured ? "p-5 md:p-6" : "p-4 md:p-5"}`}>
         <img
           src={game.logo}
           alt={`${game.name} logo`}
           loading="lazy"
           decoding="async"
-          className={`${game.logoClass ?? "h-12 md:h-14"} w-auto object-contain mb-4`}
+          className={`${game.logoClass ?? (featured ? "h-10 md:h-12" : "h-8 md:h-9")} w-auto object-contain mb-2.5`}
           style={{ filter: "drop-shadow(0 4px 14px rgba(0,0,0,0.85))" }}
         />
         <h3
-          className={`display-headline text-white tracking-[-0.02em] leading-[1.02] mb-3 ${
-            featured ? "text-[34px] md:text-[44px]" : "text-[26px] md:text-[30px]"
+          className={`display-headline text-white tracking-[-0.02em] leading-[1.05] mb-2 ${
+            featured ? "text-[24px] md:text-[30px]" : "text-[18px] md:text-[20px]"
           }`}
         >
           {game.name}
         </h3>
-        <p
-          className={`text-white/70 leading-[1.55] mb-5 ${
-            featured ? "text-[15px] max-w-md" : "text-[13.5px] max-w-sm"
-          }`}
-        >
-          {game.description}
-        </p>
+        {featured && (
+          <p className="text-white/70 leading-[1.5] mb-3 text-[13px] max-w-md">
+            {game.description}
+          </p>
+        )}
 
-        <div className="flex items-end justify-between gap-3 flex-wrap">
-          <div className="flex flex-wrap gap-1.5">
-            {game.tags.map((tag) => (
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <div className="flex flex-wrap gap-1">
+            {game.tags.slice(0, featured ? 4 : 3).map((tag) => (
               <span
                 key={tag}
-                className="text-[10.5px] font-semibold tracking-wider uppercase rounded-full px-2.5 py-1 bg-white/10 border border-white/15 text-white/90 backdrop-blur-sm"
+                className="text-[9.5px] font-semibold tracking-wider uppercase rounded-full px-2 py-0.5 bg-white/10 border border-white/15 text-white/90 backdrop-blur-sm"
               >
                 {tag}
               </span>
@@ -322,14 +301,14 @@ function GameCard({
 
           {/* CTA arrow */}
           <div
-            className="w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+            className={`${featured ? "w-10 h-10" : "w-9 h-9"} rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110`}
             style={{
               backgroundColor: game.accent,
               boxShadow: `0 8px 24px -6px ${game.accent}88`,
             }}
           >
             <ArrowUpRight
-              size={18}
+              size={featured ? 16 : 15}
               className="text-white transition-transform duration-300 group-hover:rotate-45"
               strokeWidth={2.5}
             />
