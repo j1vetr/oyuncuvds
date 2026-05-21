@@ -82,10 +82,12 @@ export function Games() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header — editorial */}
         <div className="max-w-5xl mx-auto text-center mb-7 md:mb-9">
-          <h2 className="display-headline text-white tracking-[-0.04em] leading-[0.92] text-[52px] sm:text-[76px] lg:text-[104px]">
+          <h2 className="display-headline text-white tracking-[-0.04em] leading-[0.95] text-[40px] sm:text-[56px] lg:text-[76px]">
             Hesabın{" "}
             <span className="italic font-light text-white/65">hiç</span>{" "}
-            <span className="text-[#4d8bff]">uyumaz.</span>
+            <span className="text-[#4d8bff] animate-[livePulse_1.6s_ease-in-out_infinite]">
+              uyumaz.
+            </span>
           </h2>
           <p className="text-white/55 text-[14px] md:text-[15px] leading-[1.6] mt-4 max-w-xl mx-auto">
             En sevilen MMORPG'ler için optimize edilmiş, kesintisiz 7/24
@@ -200,6 +202,16 @@ export function Games() {
         @keyframes marquee {
           from { transform: translateX(0); }
           to { transform: translateX(-33.333%); }
+        }
+        @keyframes livePulse {
+          0%, 100% {
+            opacity: 1;
+            text-shadow: 0 0 24px rgba(0,82,255,0.55), 0 0 8px rgba(0,82,255,0.35);
+          }
+          50% {
+            opacity: 0.55;
+            text-shadow: 0 0 0 rgba(0,82,255,0);
+          }
         }
       `}</style>
     </section>
