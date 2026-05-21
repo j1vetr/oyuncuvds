@@ -385,11 +385,11 @@ export function OrderModal({
             {paymentState === "idle" && (
               <div className="bg-white rounded-3xl border border-[#e8eaee] p-6 md:p-9 shadow-[0_8px_30px_rgba(15,23,42,0.05)]">
                 {/* Brand logo */}
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-7">
                   <img
                     src="/logo-v2.png"
                     alt="Oyuncu VDS"
-                    className="h-9 md:h-10 w-auto"
+                    className="h-16 md:h-20 w-auto"
                   />
                 </div>
 
