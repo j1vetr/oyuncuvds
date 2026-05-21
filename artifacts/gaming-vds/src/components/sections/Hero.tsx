@@ -5,13 +5,10 @@ import {
   Clock,
   Activity,
   Gamepad2,
-  ArrowRight,
-  ShieldCheck,
-  FileText,
   Rocket,
   ShoppingCart,
-  Check,
-  BadgeCheck,
+  FileText,
+  Lock,
 } from "lucide-react";
 
 // Brand: Windows logo (4 panes)
@@ -23,20 +20,6 @@ function WindowsLogo({ size = 18 }: { size?: number }) {
       <path d="M2 12.6H10.5V20.7L2 19.5V12.6Z" fill="#0078D4" />
       <path d="M11.5 12.6H22V22.3L11.5 20.85V12.6Z" fill="#0078D4" />
     </svg>
-  );
-}
-
-// Brand: PayTR wordmark badge
-function PayTRBadge({ className = "" }: { className?: string }) {
-  return (
-    <div
-      className={`flex items-center justify-center bg-[#0052ff] text-white font-bold rounded-lg ${className}`}
-    >
-      <span className="leading-none">
-        <span className="text-[10px]">Pay</span>
-        <span className="text-[11px]">TR</span>
-      </span>
-    </div>
   );
 }
 
@@ -91,36 +74,9 @@ const STATS: StatItem[] = [
   },
 ];
 
-// Small floating info card used around the device image
-function FloatCard({
-  icon,
-  title,
-  desc,
-  className = "",
-}: {
-  icon: React.ReactNode;
-  title: string;
-  desc: string;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`absolute z-20 bg-white rounded-2xl border border-[#dee1e6] shadow-[0_10px_24px_-8px_rgba(15,23,42,0.18)] px-3.5 py-3 flex items-center gap-3 w-[200px] ${className}`}
-    >
-      <div className="shrink-0 w-9 h-9 rounded-xl bg-[#f4f7ff] flex items-center justify-center">
-        {icon}
-      </div>
-      <div className="min-w-0">
-        <p className="text-[12.5px] font-semibold text-[#0a0b0d] leading-tight">{title}</p>
-        <p className="text-[11px] text-[#5b616e] leading-snug mt-0.5">{desc}</p>
-      </div>
-    </div>
-  );
-}
-
 export function Hero({ onOpenOrder }: HeroProps) {
   return (
-    <section className="relative w-full bg-white pt-10 md:pt-12 pb-10 md:pb-14 overflow-x-clip">
+    <section className="relative w-full bg-white pt-10 md:pt-14 pb-10 md:pb-14 overflow-x-clip">
       {/* Background decoration: layered radial glows + dot grid */}
       <div
         className="pointer-events-none absolute inset-0 -z-10"
@@ -143,16 +99,10 @@ export function Hero({ onOpenOrder }: HeroProps) {
       />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-12 lg:gap-10 items-center">
-          {/* LEFT: Badge + Copy + CTAs + trust strip */}
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-10 lg:gap-8 items-center">
+          {/* LEFT: Copy + CTAs + trust strip */}
           <div className="relative">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 h-9 pl-3 pr-4 rounded-full bg-[#eaf1ff] border border-[#cfdcff] text-[#0052ff] text-[13px] font-semibold mb-6">
-              <ShieldCheck size={15} strokeWidth={2.4} />
-              Faturalı ve Güvenli Oyuncu VDS Hizmeti
-            </div>
-
-            <h1 className="display-headline text-[42px] sm:text-[54px] lg:text-[58px] xl:text-[64px] text-[#0a0b0d] leading-[1.05] tracking-[-0.02em] mb-7">
+            <h1 className="display-headline text-[42px] sm:text-[54px] lg:text-[60px] xl:text-[66px] text-[#0a0b0d] leading-[1.05] tracking-[-0.02em] mb-7">
               Bilgisayarın
               <br />
               kapalıyken
@@ -163,182 +113,75 @@ export function Hero({ onOpenOrder }: HeroProps) {
             </h1>
 
             <p className="text-[#5b616e] text-[16px] md:text-[17px] leading-[1.7] max-w-xl mb-8">
-              Knight Online, Metin2 ve Silkroad hesaplarını pazar, farm ve EXP party
-              için uzaktan Windows VDS üzerinde kesintisiz çalıştır.{" "}
-              <span className="text-[#0a0b0d] font-semibold">
-                Tüm satışlar faturalı yapılır
-              </span>
-              , ödemeler{" "}
-              <span className="text-[#0a0b0d] font-semibold">PayTR</span> altyapısıyla
-              güvenli şekilde alınır ve erişim bilgileriniz{" "}
-              <span className="text-[#0a0b0d] font-semibold">30-60 dakika</span>{" "}
-              içinde teslim edilir.
+              Knight Online, Metin2 ve Silkroad hesaplarını uzaktan, kesintisiz
+              çalıştır. Windows kurulu, hazır sistemlerimizle güvenli bağlantı
+              sayesinde oyun deneyimin yarım kalmaz. Satın al, bağlantını al,
+              hemen kullanmaya başla.
             </p>
 
-            {/* CTAs with subtitle */}
-            <div className="flex flex-wrap items-stretch gap-3">
+            {/* CTAs */}
+            <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={() => scrollTo("paketler")}
-                className="group h-[58px] px-4 rounded-2xl bg-[#0052ff] text-white text-left hover:bg-[#003ecc] active:bg-[#003396] transition-all shadow-[0_8px_24px_-6px_rgba(0,82,255,0.45)] hover:shadow-[0_12px_28px_-6px_rgba(0,82,255,0.55)] flex items-center gap-2.5"
+                className="h-12 px-6 rounded-full bg-[#0052ff] text-white text-[14.5px] font-semibold hover:bg-[#003ecc] active:bg-[#003396] transition-all shadow-[0_8px_24px_-6px_rgba(0,82,255,0.45)] hover:shadow-[0_12px_28px_-6px_rgba(0,82,255,0.55)] flex items-center gap-2"
                 data-testid="button-hero-packages"
               >
-                <Rocket size={18} className="shrink-0" />
-                <span className="flex flex-col leading-tight whitespace-nowrap">
-                  <span className="text-[14px] font-semibold">Paketleri İncele</span>
-                  <span className="text-[11px] font-medium text-white/75">
-                    Faturalı VDS paketleri
-                  </span>
-                </span>
+                <Rocket size={17} />
+                Paketleri İncele
               </button>
               <button
                 onClick={() => onOpenOrder?.()}
-                className="h-[58px] px-4 rounded-2xl bg-[#eef0f3] text-[#0a0b0d] text-left hover:bg-[#dee1e6] transition-colors flex items-center gap-2.5"
+                className="h-12 px-6 rounded-full bg-white border border-[#dee1e6] text-[#0a0b0d] text-[14.5px] font-semibold hover:bg-[#f7f7f7] transition-colors flex items-center gap-2"
                 data-testid="button-hero-order"
               >
-                <ShoppingCart size={18} className="shrink-0 text-[#0a0b0d]/80" />
-                <span className="flex flex-col leading-tight whitespace-nowrap">
-                  <span className="text-[14px] font-semibold">Sipariş Ver</span>
-                  <span className="text-[11px] font-medium text-[#5b616e]">
-                    PayTR güvenli ödeme
-                  </span>
-                </span>
+                <ShoppingCart size={17} className="text-[#0a0b0d]/80" />
+                Sipariş Ver
               </button>
               <a
                 href="https://wa.me/908503094769"
                 target="_blank"
                 rel="noreferrer"
-                className="h-[58px] px-4 rounded-2xl bg-white border border-[#dee1e6] text-[#0a0b0d] hover:border-[#25D366]/60 hover:bg-[#25D366]/[0.04] transition-colors flex items-center gap-2.5"
+                className="h-12 px-6 rounded-full bg-white border border-[#25D366]/40 text-[#0a0b0d] text-[14.5px] font-semibold hover:bg-[#25D366]/[0.06] transition-colors flex items-center gap-2"
                 data-testid="button-hero-whatsapp"
               >
-                <WhatsAppIcon size={18} className="text-[#25D366] shrink-0" />
-                <span className="flex flex-col leading-tight whitespace-nowrap">
-                  <span className="text-[14px] font-semibold">WhatsApp Destek</span>
-                  <span className="text-[11px] font-medium text-[#5b616e]">
-                    Kurulum ve teslimat desteği
-                  </span>
-                </span>
+                <WhatsAppIcon size={18} className="text-[#25D366]" />
+                WhatsApp Destek
               </a>
             </div>
 
             {/* Trust strip */}
-            <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] text-[#5b616e]">
-              {[
-                "Resmi faturalı satış",
-                "PayTR güvenli ödeme",
-                "30-60 dk hızlı teslimat",
-              ].map((t) => (
-                <span key={t} className="inline-flex items-center gap-1.5">
-                  <span className="w-4 h-4 rounded-full bg-[#0052ff]/10 flex items-center justify-center">
-                    <Check size={11} strokeWidth={3} className="text-[#0052ff]" />
-                  </span>
-                  {t}
-                </span>
-              ))}
+            <div className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-2.5 text-[13px] text-[#5b616e]">
+              <span className="inline-flex items-center gap-2">
+                <FileText size={15} className="text-[#0052ff]" />
+                Resmi faturalı satış
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Lock size={15} className="text-[#0052ff]" />
+                PayTR güvenli ödeme
+              </span>
+              <span className="inline-flex items-center gap-2">
+                <Clock size={15} className="text-[#0052ff]" />
+                30-60 dk hızlı teslimat
+              </span>
             </div>
           </div>
 
-          {/* RIGHT: Device mockup with floating cards */}
+          {/* RIGHT: Pre-composed hero image (devices + info cards) */}
           <div className="relative w-full">
-            {/* Soft blue glow behind devices */}
             <div
               className="pointer-events-none absolute inset-0 -z-10"
               style={{
                 background:
-                  "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,82,255,0.18), transparent 65%)",
+                  "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0,82,255,0.16), transparent 65%)",
                 filter: "blur(8px)",
               }}
             />
-            {/* Decorative blue circle backdrop */}
-            <div
-              className="hidden lg:block pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[78%] aspect-square rounded-full -z-10"
-              style={{
-                background:
-                  "conic-gradient(from 200deg, rgba(0,82,255,0.10), rgba(0,82,255,0.02) 40%, rgba(0,82,255,0.12) 70%, rgba(0,82,255,0.04))",
-                filter: "blur(2px)",
-              }}
-            />
-
-            {/* Device mockup image with subtle drop-shadow */}
             <img
-              src="/hero-devices.png"
-              alt="Oyuncu VDS — bilgisayar ve telefon görünümü"
-              className="relative z-10 w-full h-auto object-contain mx-auto max-w-[720px] lg:max-w-none lg:scale-105 xl:scale-110 origin-center"
-              style={{ filter: "drop-shadow(0 24px 48px rgba(15,23,42,0.18))" }}
+              src="/hero-composition.png"
+              alt="Oyuncu VDS — bilgisayar, telefon ve hizmet özellikleri"
+              className="relative z-10 w-full h-auto object-contain mx-auto max-w-[820px] lg:max-w-none lg:scale-110 xl:scale-115 origin-center"
               loading="eager"
               fetchPriority="high"
-            />
-
-            {/* Floating cards - LEFT side */}
-            <FloatCard
-              className="hidden md:flex left-0 lg:-left-2 top-[8%]"
-              icon={<FileText size={18} className="text-[#0052ff]" />}
-              title="Faturalı Satış"
-              desc="Her sipariş için resmi fatura"
-            />
-            <FloatCard
-              className="hidden md:flex left-2 lg:left-0 top-[42%] -translate-y-1/2"
-              icon={<PayTRBadge className="w-7 h-7 text-[10px]" />}
-              title="PayTR Güvenli Ödeme"
-              desc="Kart bilgileriniz korunur"
-            />
-            <FloatCard
-              className="hidden md:flex left-0 lg:-left-2 bottom-[10%]"
-              icon={<Clock size={18} className="text-[#0052ff]" />}
-              title="30-60 dk Teslimat"
-              desc="Erişim bilgileriniz hızlıca iletilir"
-            />
-
-            {/* Floating cards - RIGHT side */}
-            {/* Order Guarantee — taller card */}
-            <div className="hidden md:block absolute right-0 lg:-right-2 top-[6%] z-20 w-[225px] bg-white rounded-2xl border border-[#dee1e6] shadow-[0_10px_28px_-8px_rgba(15,23,42,0.20)] p-4">
-              <div className="flex items-center gap-2 mb-3">
-                <ShieldCheck size={16} className="text-[#0052ff]" />
-                <p className="text-[13px] font-semibold text-[#0a0b0d]">
-                  Sipariş Güvencesi
-                </p>
-              </div>
-              <ul className="space-y-1.5">
-                {[
-                  "Resmi fatura",
-                  "PayTR güvenli ödeme",
-                  "30-60 dk teslimat",
-                  "WhatsApp destek",
-                ].map((t) => (
-                  <li
-                    key={t}
-                    className="flex items-center gap-2 text-[12px] text-[#0a0b0d]"
-                  >
-                    <span className="w-4 h-4 rounded-full bg-[#16a34a]/10 flex items-center justify-center">
-                      <Check size={10} strokeWidth={3} className="text-[#16a34a]" />
-                    </span>
-                    {t}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-3 pt-3 border-t border-[#eef0f3] flex items-center gap-2">
-                <BadgeCheck size={14} className="text-[#0052ff]" />
-                <p className="text-[11.5px] text-[#5b616e] leading-tight">
-                  Güvenli, hızlı ve kesintisiz hizmet
-                </p>
-              </div>
-            </div>
-
-            <FloatCard
-              className="hidden md:flex right-0 lg:-right-2 top-[62%]"
-              icon={<WindowsLogo size={18} />}
-              title="Windows 10 Kurulu"
-              desc="Hazır sistem teslimi"
-            />
-            <FloatCard
-              className="hidden md:flex right-2 lg:right-0 bottom-[6%]"
-              icon={
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="absolute inline-flex h-full w-full rounded-full bg-[#16a34a] opacity-60 animate-ping" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#16a34a]" />
-                </span>
-              }
-              title="7/24 Aktif"
-              desc="Ev internetinden bağımsız çalışma"
             />
           </div>
         </div>
@@ -365,13 +208,6 @@ export function Hero({ onOpenOrder }: HeroProps) {
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes heroFloat {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-6px); }
-        }
-      `}</style>
     </section>
   );
 }
