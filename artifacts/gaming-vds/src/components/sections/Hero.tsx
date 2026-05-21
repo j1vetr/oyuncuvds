@@ -7,8 +7,6 @@ import {
   Gamepad2,
   Rocket,
   ShoppingCart,
-  FileText,
-  Lock,
 } from "lucide-react";
 
 // Brand: Windows logo (4 panes)
@@ -149,21 +147,6 @@ export function Hero({ onOpenOrder }: HeroProps) {
               </a>
             </div>
 
-            {/* Trust strip */}
-            <div className="mt-7 flex flex-wrap items-center gap-x-7 gap-y-2.5 text-[13px] text-[#5b616e]">
-              <span className="inline-flex items-center gap-2">
-                <FileText size={15} className="text-[#0052ff]" />
-                Resmi faturalı satış
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <Lock size={15} className="text-[#0052ff]" />
-                PayTR güvenli ödeme
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <Clock size={15} className="text-[#0052ff]" />
-                30-60 dk hızlı teslimat
-              </span>
-            </div>
           </div>
 
           {/* RIGHT: Pre-composed hero image (devices + info cards) */}
