@@ -38,30 +38,38 @@ export function Games() {
   return (
     <section
       id="desteklenen-oyunlar"
-      className="relative w-full bg-white py-14 md:py-16 overflow-x-clip border-t border-[#dee1e6]"
+      className="relative w-full bg-[#0a0b0d] py-16 md:py-20 overflow-x-clip border-t border-b border-[#1a1c20]"
     >
-      {/* Soft dot pattern accents */}
+      {/* Soft dot pattern accents on dark */}
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-60"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-40"
         style={{
           backgroundImage:
-            "radial-gradient(circle, #dee1e6 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(255,255,255,0.10) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
           backgroundPosition: "0 0",
           maskImage:
             "radial-gradient(ellipse 70% 60% at 50% 40%, transparent 30%, black 80%)",
         }}
       />
+      {/* Subtle blue glow accents */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 50% 40% at 15% 20%, rgba(0,82,255,0.18), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 80%, rgba(0,82,255,0.12), transparent 60%)",
+        }}
+      />
 
       <div className="container mx-auto px-4">
-        <div className="text-center mb-8 max-w-xl mx-auto">
-          <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#0052ff] bg-[#e6edff] rounded-full px-3 py-1 mb-5">
+        <div className="text-center mb-10 max-w-xl mx-auto">
+          <span className="inline-block text-[12px] font-semibold uppercase tracking-[0.15em] text-[#4d8bff] bg-[#0052ff]/15 border border-[#0052ff]/30 rounded-full px-3 py-1 mb-5">
             Uyumlu Platformlar
           </span>
-          <h2 className="display-headline text-[40px] md:text-[56px] text-[#0a0b0d] mb-4 tracking-[-0.02em]">
+          <h2 className="display-headline text-[40px] md:text-[56px] text-white mb-4 tracking-[-0.02em]">
             Desteklenen oyunlar
           </h2>
-          <p className="text-[#5b616e] text-[16px] leading-[1.65]">
+          <p className="text-white/65 text-[16px] leading-[1.65]">
             En popüler MMORPG oyunlarında kesintisiz 7/24 kullanım için optimize
             edilmiş VDS hizmeti.
           </p>
@@ -72,7 +80,7 @@ export function Games() {
             return (
               <div
                 key={game.id}
-                className="group relative flex flex-col bg-[#0a0b0d] rounded-3xl overflow-hidden border border-[#1a1c20] shadow-[0_8px_30px_rgba(15,23,42,0.10)] hover:shadow-[0_16px_40px_rgba(15,23,42,0.18)] hover:-translate-y-1 transition-all duration-300"
+                className="group relative flex flex-col bg-[#141618] rounded-3xl overflow-hidden border border-white/[0.08] shadow-[0_8px_30px_rgba(0,0,0,0.35)] hover:shadow-[0_20px_50px_rgba(0,82,255,0.25)] hover:border-white/[0.18] hover:-translate-y-1 transition-all duration-300"
                 data-testid={`card-game-${game.id}`}
               >
                 {/* Image */}
@@ -149,33 +157,33 @@ export function Games() {
         </div>
 
         {/* Trust strip */}
-        <div className="mt-10 max-w-5xl mx-auto bg-white border border-[#dee1e6] rounded-2xl px-6 py-5 grid grid-cols-1 sm:grid-cols-3 gap-4 shadow-[0_4px_20px_rgba(15,23,42,0.04)]">
+        <div className="mt-10 max-w-5xl mx-auto bg-white/[0.04] border border-white/[0.10] rounded-2xl px-6 py-5 grid grid-cols-1 sm:grid-cols-3 gap-4 backdrop-blur-sm">
           {[
             {
-              icon: <Shield size={18} className="text-[#0052ff]" />,
+              icon: <Shield size={18} className="text-[#4d8bff]" />,
               title: "Tam Uyum",
               desc: "Oyunlarla %100 uyumlu altyapı.",
             },
             {
-              icon: <Wifi size={18} className="text-[#0052ff]" />,
+              icon: <Wifi size={18} className="text-[#4d8bff]" />,
               title: "Stabil Bağlantı",
               desc: "Düşük ping ve yüksek performans.",
             },
             {
-              icon: <Clock size={18} className="text-[#0052ff]" />,
+              icon: <Clock size={18} className="text-[#4d8bff]" />,
               title: "7/24 Açık Hesap",
               desc: "Hesaplarınız günün her saati güvende.",
             },
           ].map((item) => (
             <div key={item.title} className="flex items-center gap-3">
-              <span className="w-11 h-11 rounded-full bg-[#e6edff] flex items-center justify-center shrink-0">
+              <span className="w-11 h-11 rounded-full bg-[#0052ff]/15 border border-[#0052ff]/25 flex items-center justify-center shrink-0">
                 {item.icon}
               </span>
               <div>
-                <p className="text-[14px] font-bold text-[#0a0b0d] leading-tight">
+                <p className="text-[14px] font-bold text-white leading-tight">
                   {item.title}
                 </p>
-                <p className="text-[12.5px] text-[#5b616e] leading-snug">
+                <p className="text-[12.5px] text-white/60 leading-snug">
                   {item.desc}
                 </p>
               </div>
