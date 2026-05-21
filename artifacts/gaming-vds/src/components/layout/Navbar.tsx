@@ -1,4 +1,4 @@
-import { Menu, X, ShoppingCart } from "lucide-react";
+import { Menu, X, ShoppingCart, Mail, MapPin, FileCheck, Instagram } from "lucide-react";
 import { useState } from "react";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 
@@ -30,7 +30,42 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#eef0f3]">
+    <div className="sticky top-0 z-50 w-full">
+      {/* Top utility bar */}
+      <div className="hidden md:block w-full bg-[#0a0b0d] text-white/85 text-[12px]">
+        <div className="container mx-auto px-4 h-9 flex items-center justify-between gap-6">
+          <div className="flex items-center gap-5">
+            <span className="inline-flex items-center gap-1.5">
+              <FileCheck size={13} className="text-[#4d8bff]" />
+              <span className="text-white/90">Tüm satışlar resmi faturalıdır</span>
+            </span>
+            <span className="hidden lg:inline-flex items-center gap-1.5 text-white/70">
+              <MapPin size={13} />
+              İstanbul, Türkiye
+            </span>
+          </div>
+          <div className="flex items-center gap-5">
+            <a
+              href="mailto:info@oyuncuvds.com.tr"
+              className="inline-flex items-center gap-1.5 text-white/80 hover:text-white transition-colors"
+            >
+              <Mail size={13} />
+              info@oyuncuvds.com.tr
+            </a>
+            <a
+              href="https://instagram.com/oyuncuvds"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-white/80 hover:text-white transition-colors"
+            >
+              <Instagram size={13} />
+              @oyuncuvds
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <nav className="w-full bg-white/90 backdrop-blur-md border-b border-[#eef0f3]">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
         <div
           className="flex items-center shrink-0 cursor-pointer"
@@ -119,6 +154,7 @@ export function Navbar({ onOpenOrder }: NavbarProps) {
           </button>
         </div>
       )}
-    </nav>
+      </nav>
+    </div>
   );
 }
